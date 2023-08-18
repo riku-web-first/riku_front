@@ -1,0 +1,257 @@
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+	line-height:1;
+	/* background-image:url(../images/body.jpg); */
+	background-color:#000022;
+	font-family: 'Avenir','Helvetica Neue','Helvetica','Arial','Hiragino Sans','ヒラギノ角ゴシック',YuGothic,'Yu Gothic','メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic' ;
+	margin: 0px;
+	padding: 5px 5px;
+	color: white;
+	font-size:16px;
+	max-width:1000px;
+	min-width:320px;
+	margin: 0 auto;
+}
+*,*::before,*::after{
+	box-sizing: border-box;
+}
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+	background:transparent;
+	text-decoration: none;
+	color:white;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;  
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+
+<!--ここまでリセットcss-->
+h1,h2,h3,ul{
+	margin:0px;
+	padding:0px;
+}
+@keyframes header{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity:1;
+	}
+}
+@keyframes about {
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+
+@keyframes news{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+
+}
+@keyframes contact{
+	0%{
+		opacity:0;
+	}
+	100%{
+		opacity:1;
+	}
+}
+header{
+	width:100%;
+	border:solid 2px white;
+	border-radius: 3px;
+	animation: header 1s;
+	background-color: rgba(255,255,255,0.3);
+}
+.header_inner{
+	width:100%;
+}
+.header_inner img{
+	width:150px;
+	padding: 20px 0px 15px 5px;
+}
+
+nav{
+	width:100%;
+}
+nav ul{
+	display: flex;
+	width: 100%;
+}
+nav ul li{
+	border-top: 1px solid white;
+	text-align: center;
+	width:50%;
+	font-weight: bold;
+	letter-spacing:3px;
+	font-size:12px;
+}
+nav ul li a:hover{
+	color:  slategrey;
+	transition: ease 0.5s;
+}
+nav ul li a::after{
+	content: '';
+	border-bottom: slategrey solid 2px;
+	bottom:0;
+	display: block;
+	transition:all 0.3s ease;
+	width:0;
+}
+nav ul li a:hover::after{
+	width:100%;
+}
+nav ul li + li{
+	border-left:1px solid white;
+}
+nav ul li a{
+	padding: 8px 8px 6px 8px;
+	display:block;
+	position: relative;
+}
+main{
+	width:100%;
+	animation: contact 1s;
+}
+
+input,label{
+	display: block;
+}
+#contact_header{
+	margin-top:20px;
+}
+#contact_inner{
+	width:100%;
+}
+
+#contact_inner label p{
+	margin-bottom: 5px;
+	margin-top:20px ;
+}
+#contact_inner textarea{
+	width:400px;
+	height:200px;
+}
+.submit{
+	width:100px;
+	height:40px;
+}
+.submit:hover{
+	background-color:gray;
+}
+
+input[type="submit"]{
+	margin-top:20px ;
+}
+footer{
+	width:100%;
+	font-size:12px;
+	margin:20px 0px;
+}
+
+@media screen and (min-width:768px){
+    nav ul li{
+        font-size:14px;
+    }
+	.header_inner img{
+		width: 200px;
+	}

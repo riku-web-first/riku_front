@@ -1,0 +1,63 @@
+body {
+    background-color: #555;
+}
+
+.team_name {
+    color: #fff;
+}
+
+.team_notice {
+    color: #fff;
+}
+
+.main {
+    margin: 0 auto;
+}
+
+.title {
+    text-align: center;
+    min-height: 100vh;
+}
+
+.character_content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.character_content:nth-child(n+2) {
+    margin-top: 300px;
+}
+
+.character {
+    width: 30%;
+    height: 150px;
+    background-color: red;
+    transform: translateX(-100%);
+    transition: transform 0.6s ease-in;
+}
+
+.character.show {
+    transform: translateX(0);
+}
+
+.info {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    transform: translateX(100%);
+    transition: transform 0.6s ease-in;
+}
+
+.info.show {
+    transform: translateX(0);
+}
+
+.info_character_name {
+    color: #fff;
+}
+
+.info_character_job {
+    color: #fff;
+}

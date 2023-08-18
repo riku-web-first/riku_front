@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>拠り所　リク</title>
+  <link href="css/index.css" rel="stylesheet" type="text/css" />
+  <link href="css/jquery.bxslider.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+  <script type="text/javascript" src="js/jquery.bxslider.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      var obj = $('.bxslider').bxSlider({
+        mode: 'horizontal',
+        speed: 800, //エフェクトのスピード
+        auto: true,//自動再生有効
+        slideWidth: 1000, //スライドショーの幅
+        pause: 10000,//表示間隔
+        maxslide: 1,
+        controls: false,
+        pager: true,
+        onSlideAfter: function () { obj.startAuto(); }//自動的に再開
+      });
+    });
+  </script>
+  <script src="js/style.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1><img src="images/logo.png"></h1>
+    <div id="menu_icon">
+      <span class="line" id="linetarget1"></span>
+      <span class="line" id="linetarget2"></span>
+      <span class="line" id="linetarget3"></span>
+    </div>
+    <div id="site_navi">
+      <ul>
+        <li><a href="">お問い合わせ</a></li>
+        <li><a href="">サイトマップ</a></li>
+        <li><a href="">アンケート</a></li>
+        <li><a href="">採用情報</a></li>
+      </ul>
+    </div>
+    <div id="site_navi_smapho">
+      <ul>
+        <li><a href="">MENU</a></li>
+        <li><a href="">SHOP</a></li>
+        <li><a href="">SERVICE</a></li>
+        <li><a href="">採用情報</a></li>
+        <li><a href="">会社情報</a></li>
+      </ul>
+    </div>
+  </header>
+  <main>
+    <div id="mainmenu">
+      <ul>
+        <li class="toppage"><a href=""><img src="images/toppage.png" /></a></li>
+        <li class="menu"><a href=""><img src="images/menu.png" /></a></li>
+        <li class="blog"><a href=""><img src="images/blog.png" /></a></li>
+        <li class="access"><a href=""><img src="images/access.png" /></a></li>
+        <li class="contact"><a href=""><img src="images/contact.png" /></a></li>
+      </ul>
+    </div>
+    <div class="slider">
+      <ul class="bxslider">
+        <li><img src="images/cafe1test.jpg" /></li>
+        <li><img src="images/cafe2test.jpg" /></li>
+        <li><img src="images/cafe3test.jpg" /></li>
+      </ul>
+    </div>
+    <div id="content">
+      <div id="smapho_nav">
+        <ul>
+          <li><a href="#"><img src="images/menuinfo.png"></a></li>
+          <li><a href="#"><img src="images/shopinfo.png"></a></li>
+          <li><a href="#"><img src="images/pointinfo.png"></a></li>
+        </ul>
+      </div>
+      <div id="slider2_wrap">
+        <div class="slider2">
+          <ul class="bxslider">
+            <li><a href="#"><img src="images/subslider1.png"></a></li>
+            <li><a href="#"><img src="images/subslider2.png"></a></li>
+          </ul>
+        </div>
+      </div>
+      <div id="leftcolumn">
+        <div id="news">
+          <h1><img src="images/news.gif" /></h1>
+          <ul>
+            <li><img src="images/item.png" />2020/12/30 <br /><a href="">新商品の情報を追加しました。</a></li>
+            <li><img src="images/info.png" />2020/12/05 <br />Menuページを追加しました。</li>
+            <li><img src="images/shop.png" />2020/11/01 <br />Accessページを追加しました。</li>
+            <li>2020/10/05 <br />Blogページを追加しました。</li>
+            <li><img src="images/info.png" />2020/09/30 <br />ヘッダーを作成しました。</li>
+            <li><img src="images/shop.png" />2020/08/30 <br />フッターを作成しました。</li>
+            <li>2020/08/30 <br />WEBサイトの作成を開始しました。</li>
+            <li>2020/08/30 <br />WEBサイトの作成を開始しました。</li>
+            <li>2020/08/30 <br />WEBサイトの作成を開始しました。</li>
+          </ul>
+        </div>
+        <div id="sns">
+          <ul>
+            <li><a href="#"><img src="images/instagram.png" /></a></li>
+            <li><a href="#"><img src="images/twitter.png" /></a></li>
+            <li><a href="#"><img src="images/facebook.png" /></a></li>
+          </ul>
+        </div>
+      </div>
+      <div id="maincolumn">
+        <div id="shoplist">
+          <h1><img src="images/kari.png" /></h1>
+          <ul>
+            <li><img src="images/shop1.jpg" width="100px" height="75px" /><br />
+              <p>2020.5.01<br /> CafeRiku<br />印西店<br />グランドオープン</p>
+            </li>
+            <li><img src="images/shop2.jpg" width="100px" height="75px" /><br />
+              <p>2020.5.01<br /> CafeRiku<br />印西店<br />グランドオープン</p>
+            </li>
+            <li><img src="images/shop3.jpg" width="100px" height="75px" /><br />
+              <p>2020.5.01<br /> CafeRiku<br />印西店<br />グランドオープン</p>
+            </li>
+          </ul>
+          <ul>
+            <li><img src="images/shop4.jpg" width="100px" height="75px" /><br />
+              <p>2020.5.01<br /> CafeRiku<br />印西店<br />グランドオープン</p>
+            </li>
+            <li><img src="images/shop5.jpg" width="100px" height="75px" /><br />
+              <p>2020.5.01<br /> CafeRiku<br />印西店<br />グランドオープン</p>
+            </li>
+            <li><img src="images/shop6.jpg" width="100px" height="75px" /><br />
+              <p>2020.5.01<br /> CafeRiku<br />印西店<br />グランドオープン</p>
+            </li>
+          </ul>
+        </div>
+        <div id="search">
+          <div id="searchlogo">
+            <h1><img src="images/search_logo.png" /></h1>
+          </div>
+          <div id="searchinner">
+            <div id="search_left">
+              <h2><img src="images/conditions_title.gif" /></h2>
+              <form action="#" method="post">
+                <ul class="choicelist">
+                  <li><input type="checkbox" id="grand" name="grand">
+                    <label for="grand">グランドオープン</label>
+                  </li>
+                  <li><input type="checkbox" id="renewal" name="renewal">
+                    <label for="renewal">リニューアルオープン</label>
+                  </li>
+                </ul>
+                <p>店舗名<input type="search" size="15" placeholder="店舗名"></p>
+                <div class="checklist">
+                  <ul>
+                    <li>
+                      <p><label for="wi-fi"><img src="images/wifi.png" /></label></p>
+                      <p class="checklisttext"><input type="checkbox" id="wi-fi" name="wi-fi"><br />
+                        <label for="wi-fi">Wi-Fi</label>
+                      </p>
+                    </li>
+                    <li>
+                      <p><label for="parking"><img src="images/car.png" /></label></p>
+                      <p class="checklisttext"><input type="checkbox" id="parking" name="parking"><br />
+                        <label for="parking">駐車場</label>
+                      </p>
+                    </li>
+                    <li>
+                      <p><label for="smoke"><img src="images/smoke.png" /></label></p>
+                      <p class="checklisttext"><input type="checkbox" id="smoke" name="smoke"><br />
+                        <label for="smoke">喫煙室</label>
+                      </p>
+                    </li>
+                    <li>
+                      <p><label for="lunch"><img src="images/lunch.png" /></label></p>
+                      <p class="checklisttext"><input type="checkbox" id="lunch" name="lunch"><br />
+                        <label for="lunch">ランチ</label>
+                      </p>
+                    </li>
+                  </ul>
+                  <p><input type="image" src="images/search_btn.gif" /></p>
+                </div>
+              </form>
+            </div>
+            <div id="search_right">
+              <div class="map">
+                <h2><img src="images/map_title.gif" /></h2>
+                <a href=""><img src="images/map.png" /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="sidemenu">
+        <ul>
+          <li><a href=""><img src="images/grand_side.png" /></a></li>
+          <li><a href=""><img src="images/drink_side.png" /></a></li>
+          <li><a href=""><img src="images/food_side.png" /></a></li>
+          <li><a href=""><img src="images/dessert_side.png" /></a></li>
+          <li><a href=""><img src="images/take_side.png" /></a></li>
+        </ul>
+        <ul class="bunner">
+          <li><a href=""><img src="images/images/subslider1.png"></a></li>
+          <li><a href=""><img src="images/images/subslider2.png"></a></li>
+        </ul>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div id="footer">
+      <ul>
+        <li>
+          <p class="menutitle">Menu<br />
+            Rikuのメニュー</p>
+          <ul>
+            <li>新メニュー</li>
+            <li>ホットドリンク</li>
+          </ul>
+        </li>
+        <li>
+          <p class="searchtitle">Shop＆Search<br />
+            店舗情報</p>
+          <ul>
+            <li>店舗検索</li>
+          </ul>
+        </li>
+        <li>
+          <p class="companytitle">Company<br />
+            会社情報</p>
+          <ul>
+            <li>会社情報</li>
+            <li>会社概要</li>
+            <li>本社地図</li>
+            <li>プレリリース</li>
+          </ul>
+        </li>
+        <li>
+          <p class="contacttitle">Contact<br />
+            お問い合わせ</p>
+          <ul>
+            <li>お問い合わせ/アンケート</li>
+            <li>個人情報保護方針</li>
+            <li>ご利用規約</li>
+          </ul>
+        </li>
+        <li>
+          <p class="recruittitle">Recruit<br />
+            採用情報</p>
+          <ul>
+            <li>社員採用情報</li>
+            <li>アルバイト採用情報</li>
+            <li>シニア層採用情報</li>
+            <li>新卒採用情報</li>
+            <li>中途採用情報</li>
+          </ul>
+        </li>
+        <li>
+          <p class="othertitle">Other<br />
+            その他</p>
+          <ul>
+            <li>サイトマップ</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </footer>
+  <div id="copy">
+    <small>Copyright © 2020 Riku All right Reserved</small>
+  </div>
+
+</body>
+
+</html>
