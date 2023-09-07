@@ -1,3 +1,30 @@
+.portfolio_panel_like {
+	position: relative;
+	overflow: hidden;
+}
+
+.portfolio_panel_video {
+	opacity: 0.3;
+	position: absolute;
+	top: 0;
+	left: 0;
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+}
+
+.portfolio_panel_title_like{
+	position: relative;
+}
+
+.portfolio_panel_inner_like{
+	position: relative;
+}
+
+.portfolio_panel_inner_like_list_item:nth-child(n+2){
+	margin-top: 30px;
+}
+
 .portfolio_panel:not(.portfolio_panel_header) {
 	margin-top: 6px;
 }
@@ -20,7 +47,6 @@
 .portfolio_panel_future_title {
 	font-size: 14px;
 	text-align: center;
-	white-space: nowrap;
 	background-color: #333;
 	border-radius: 3px;
 	width: 100%;
@@ -33,6 +59,10 @@
 .portfolio_panel_future_title.show {
 	transform: translateY(0px);
 	opacity: 1;
+}
+
+.portfolio_panel_inner_like_list_item_body{
+	padding-left: 16px;
 }
 
 .portfolio_panel_inner_skill {

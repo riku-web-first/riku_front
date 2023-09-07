@@ -4,20 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/portfolio_common.css">
-    <link rel="stylesheet" href="../css/profile.css" />
-    <script src="../js/profile.js" defer></script>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/portfolio_common.css">
+    <link rel="stylesheet" href="css/profile.css" />
+    <script src="js/profile.js" defer></script>
     <title>profile</title>
 </head>
 <!-- 共通ボディー -->
+
 <body class="portfolio" id="portfolio">
     <!-- 共通ヘッダーここから -->
     <div class="portfolio_header_wrapper">
         <header class="portfolio_panel portfolio_panel_header">
             <h1 class="portfolio_header">
-                <a class="portfolio_header_link" href="../html/index.html">
-                    <img class="portfolio_header_link_img" src="../images/logo.png" alt="Riku&nbsp;s&nbsp;Portfolio&nbsp;site">
+                <a class="portfolio_header_link" href="index.html">
+                    <img class="portfolio_header_link_img" src="images/logo.png"
+                        alt="Riku&nbsp;s&nbsp;Portfolio&nbsp;site">
                 </a>
             </h1>
             <div id="nav_list_sp_opener_trigger" class="nav_list_sp_opener">
@@ -25,33 +28,29 @@
                 <div class="nav_list_sp_opener_button_line2"></div>
                 <div class="nav_list_sp_opener_button_line3"></div>
             </div>
+            <nav id="nav_list_sp_trigger_sub" class="nav_list_sp_wrapper">
+                <ul class="nav_list_sp">
+                    <li class=""><a class="portfolio_nav_list_item_link" href="index.html">Top</a></li>
+                    <li class=""><a class="portfolio_nav_list_item_link" href="profile.html">Profile</a></li>
+                    <li class=""><a class="portfolio_nav_list_item_link" href="work.html">Work</a></li>
+                </ul>
+            </nav>
         </header>
-        <nav id="nav_list_sp_trigger_sub" class="nav_list_sp_wrapper">
-            <ul class="nav_list_sp">
-                <li class=""><a class="portfolio_nav_list_item_link" href="../html/index.html">Top</a></li>
-                <li class=""><a class="portfolio_nav_list_item_link" href="../html/profile.html">Profile</a></li>
-                <li class=""><a class="portfolio_nav_list_item_link" href="../html/work.html">Work</a></li>
-                <li class=""><a class="portfolio_nav_list_item_link" href="../html/contact.html">Contact</a></li>
-            </ul>
-        </nav>
         <nav class="portfolio_panel portfolio_panel_nav">
             <ul class="portfolio_nav_list">
                 <li class="portfolio_nav_list_item">
-                    <a class="portfolio_nav_list_item_link" href="../html/index.html">
+                    <a class="portfolio_nav_list_item_link" href="index.html">
                         Top
                     </a>
                 </li>
                 <li class="portfolio_nav_list_item">
-                    <a class="portfolio_nav_list_item_link" href="../html/profile.html">
+                    <a class="portfolio_nav_list_item_link" href="profile.html">
                         Profile
                     </a>
                 </li>
                 <li class="portfolio_nav_list_item">
-                    <a class="portfolio_nav_list_item_link" href="../html/work.html">Work
-                    </a>
-                </li>
-                <li class="portfolio_nav_list_item">
-                    <a class="portfolio_nav_list_item_link" href="../html/contact.html">Contact
+                    <a class="portfolio_nav_list_item_link" href="work.html">
+                        Work
                     </a>
                 </li>
             </ul>
@@ -74,53 +73,48 @@
                 中学二年生にてパソコンを触り始める。<br>
                 高校は情報科学科に入学し、やりたい事が見つからず卒業後、ゲームセンターで数年アルバイト生活を送りゲーム三昧に明け暮れる。<br>
                 2012年半ば、半年間職業訓練学校のWEBデザイン学校に入校し、adobe製品、html/cssの基本を習得する。<br>
-                無事WEB系の仕事に就くも、一身上の都合で退職<br>
-                コールセンターにてチーフスーパーバイザーとして働く。その後30代に突入を機に再度WEB業界への転職を決意する。
+                コールセンターにてチーフスーパーバイザーとして働く。<br>
+                その後30代突入を機にWEB業界への転職を決意しコーダーとして2年勤務。<br>
             </p>
         </section>
-        <section class="portfolio_panel">
-            <h2 class="portfolio_panel_title">Like</h2>
-            <ul class="portfolio_panel_inner">
-                <li>
-                    <p>◆ゲーム全般◆</p>
-                    <p>ジャンル問わず幅広くプレイしており、主にeスポーツで盛り上がっているタイトルをプレイしております。</p>
-                    <p>主にプレイしているゲームタイトルです。</p>
-                    <ul class="portfolio_panel_inner_list">
-                        <li>League&nbsp;of&nbsp;Legends</li>
-                        <li>Final&nbsp;FantasyXIV</li>
-                        <li>Player&nbsp;Unknown&nbsp;Battle&nbsp;Grounds</li>
-                        <li>Ragnarok&nbsp;Online</li>
-                        <li>BlazBlue&nbsp;Centralfiction</li>
-                        <li>Guilty&nbsp;Gear&nbsp;Xrd&nbsp;Rev2</li>
-                        <li>Tekken7</li>
-                        <li>Final&nbsp;Fantasy&nbsp;Brave&nbsp;Exvius</li>
-                        <li>Drum&nbsp;mania</li>
-                    </ul>
+        <section class="portfolio_panel portfolio_panel_like">
+            <video class="portfolio_panel_video" autoplay muted loop preload="metadata" playsinline="playsinline">
+                <source class="portfolio_panel_video_source" src="images/Desktop 2023.08.21 - 17.38.19.09_2.mp4"
+                    type="video/mp4">
+            </video>
+            <h2 class="portfolio_panel_title portfolio_panel_title_like">Like</h2>
+            <ul class="portfolio_panel_inner portfolio_panel_inner_like">
+                <li class="portfolio_panel_inner_like_list_item">
+                    <div class="portfolio_panel_inner_like_list_item_title">◆ゲーム全般◆</div>
+                    <div class="portfolio_panel_inner_like_list_item_body">
+                        <p>ジャンル問わず幅広くプレイしており、主にeスポーツで盛り上がっているタイトルをプレイしております。<br>
+                            下記が主にプレイしているゲームタイトルです。</p>
+                        <ul class="portfolio_panel_inner_like_list_item_titles">
+                            <li class="portfolio_panel_inner_like_list_item_title">League&nbsp;of&nbsp;Legends</li>
+                            <li class="portfolio_panel_inner_like_list_item_title">BlazBlue&nbsp;Centralfiction</li>
+                            <li class="portfolio_panel_inner_like_list_item_title">Guilty&nbsp;Strive</li>
+                            <li class="portfolio_panel_inner_like_list_item_title">Tekken7</li>
+                            <li class="portfolio_panel_inner_like_list_item_title">Drum&nbsp;mania</li>
+                        </ul>
+                    </div>
                 </li>
-                <li>
-                    <p>◆アニメ鑑賞◆</p>
-                    <p>こちらもジャンル問わず視聴しております。</p>
-                    <p>自分に好きなアニメタイトルです。</p>
-                    <ul class="portfolio_panel_inner_list">
-                        <li>STEINS;GATE</li>
-                        <li>Sword Art Online</li>
-                        <li>とらドラ！</li>
-                        <li>冴えない彼女の育てかた</li>
-                        <li>とある魔術の禁書目録</li>
-                        <li>とある科学の超電磁砲</li>
-                    </ul>
+                <li class="portfolio_panel_inner_like_list_item">
+                    <div class="portfolio_panel_inner_like_list_item_title">◆アニメ鑑賞◆</div>
+                    <div class="portfolio_panel_inner_like_list_item_body">
+                        <p>こちらもジャンル問わず視聴しております。</p>
+                    </div>
                 </li>
-                <li>
-                    <p>◆自作PC作成◆</p>
-                    <p>金銭面的に余裕がある時などに趣味で自作PCを組み立て、主にゲーム用や配信用で使い分けています。</p>
+                <li class="portfolio_panel_inner_like_list_item">
+                    <div class="portfolio_panel_inner_like_list_item_title">◆自作PC作成◆</div>
+                    <div class="portfolio_panel_inner_like_list_item_body">
+                        <p>金銭面的に余裕がある時などに趣味で自作PCを組み立て、主にゲーム用や配信用で使い分けています。</p>
+                    </div>
                 </li>
-                <li>
-                    <p>◆ネット配信◆</p>
-                    <p>趣味でTwitchやYoutubeでゲームのネット配信を行っております。</p>
-                </li>
-                <li>
-                    <p>◆脱毛◆</p>
-                    <p>趣味と言えるかはわかりませんが、髭脱毛に約1年ほど通い少しですが美容にも気を使っております(笑)</p>
+                <li class="portfolio_panel_inner_like_list_item">
+                    <div class="portfolio_panel_inner_like_list_item_title">◆ネット配信◆</div>
+                    <div class="portfolio_panel_inner_like_list_item_body">
+                        <p>趣味でTwitchやYoutubeでゲームのネット配信を行っております。</p>
+                    </div>
                 </li>
             </ul>
         </section>
@@ -129,32 +123,53 @@
             <ul class="portfolio_panel_inner">
                 <li class="portfolio_panel_inner_list_item animationtarget">
                     <div class="portfolio_panel_inner_title">HTML5(Living Standard)</div>
-                    <div>★★★★☆</div>
+                    <div class="portfolio_panel_inner_rate">★★★★☆</div>
                     <div class="portfolio_panel_inner_skill">
-                        <img class="portfolio_panel_inner_skill_img" src="../images/icon_html5.svg" alt="HTML5">
+                        <img class="portfolio_panel_inner_skill_img" src="images/icon_html5.svg" alt="HTML5">
                         <p class="portfolio_panel_inner_skill_text">
-                            Living&nbsp;Standardのドキュメントに準拠したコーディングが出来ます。
+                            Living&nbsp;Standardのドキュメントに準拠した"セマンティクス"なコーディングが行えます。
                         </p>
                     </div>
                 </li>
                 <li class="portfolio_panel_inner_list_item animationtarget">
                     <div class="portfolio_panel_inner_title">CSS3</div>
-                    <div>★★★★☆</div>
+                    <div class="portfolio_panel_inner_rate">★★★★☆</div>
                     <div class="portfolio_panel_inner_skill">
-                        <img class="portfolio_panel_inner_skill_img" src="../images/icon_css3.svg" alt="CSS3ロゴ">
+                        <img class="portfolio_panel_inner_skill_img" src="images/icon_css3.svg" alt="CSS3ロゴ">
                         <p class="portfolio_panel_inner_skill_text">
-                            ハッキリ言うと昨今のCSS3の変革が凄まじく、モダンCSSは追えていません。
+                            前職の経験でスケーラブルなスタイリングが行えます。<br>
+                            しかし、昨今のCSSの進化が早すぎて追い切れてない部分があります(汗)<br>
                         </p>
                     </div>
                 </li>
                 <li class="portfolio_panel_inner_list_item animationtarget">
                     <div class="portfolio_panel_inner_title">レスポンシブ対応</div>
-                    <div>★★★☆☆</div>
+                    <div class="portfolio_panel_inner_rate">★★★☆☆</div>
                     <div class="portfolio_panel_inner_skill">
-                        <img class="portfolio_panel_inner_skill_img" src="../images/icon_mobile.svg" alt="スマホロゴ">
+                        <img class="portfolio_panel_inner_skill_img" src="images/icon_mobile.svg" alt="スマホロゴ">
                         <p class="portfolio_panel_inner_skill_text">シンプルなレスポンシブデザインスキルは会得しております。<br>
                             是非ポートフォリオの作品をスマホ表示化させ閲覧していただけると幸いです。<br>
                             架空ECサイトに限ってはむしろレスポンシブに力を入れております。
+                        </p>
+                    </div>
+                </li>
+                <li class="portfolio_panel_inner_list_item animationtarget">
+                    <div class="portfolio_panel_inner_title">Git</div>
+                    <div class="portfolio_panel_inner_rate">★★★☆☆</div>
+                    <div class="portfolio_panel_inner_skill">
+                        <img class="portfolio_panel_inner_skill_img" src="images/icon_git.svg" alt="Gitロゴ">
+                        <p class="portfolio_panel_inner_skill_text">Gitを用いた開発経験があります。<br>
+                            個人の開発環境でもGitを用い開発を行っております。
+                        </p>
+                    </div>
+                </li>
+                <li class="portfolio_panel_inner_list_item animationtarget">
+                    <div class="portfolio_panel_inner_title">SEO</div>
+                    <div class="portfolio_panel_inner_rate">★★☆☆☆</div>
+                    <div class="portfolio_panel_inner_skill">
+                        <img class="portfolio_panel_inner_skill_img" src="images/icon_seo.svg" alt="Gitロゴ">
+                        <p class="portfolio_panel_inner_skill_text">SEOを考慮したマークアップが行えます。<br>
+                            ただし、昨今のクローラーでのセマンティックタグなどによるコーディングの重要性は薄くなってきているのかなという印象です。
                         </p>
                     </div>
                 </li>
@@ -162,7 +177,7 @@
                         <p>★☆☆☆☆</p>
                             <div class="portfolio_panel_inner_skill">
                                 <div class="portfolio_panel_inner_skill_img">
-                                    <img src="../images/php.png" alt="phpロゴ">
+                                    <img src="images/php.png" alt="phpロゴ">
                                 </div>
                                 <div class="portfolio_panel_inner_skill_text">
                                     <p>2021年3月から独学で学習中です。XAMPPやMySQLを利用し、自身のポートフォリオサイトである<br>
@@ -174,7 +189,7 @@
                         <p>☆☆☆☆☆</p>
                                     <div class="portfolio_panel_inner_skill">
                                         <div class="portfolio_panel_inner_skill_img">
-                                            <img src="../images/jq.png" alt="jqueryロゴ">
+                                            <img src="images/jq.png" alt="jqueryロゴ">
                                         </div>
                                         <div class="portfolio_panel_inner_skill_text">
                                             <p>こちらのスキルに載せて良いか考えものですが、<br>
@@ -184,31 +199,31 @@
                     </li> -->
                 <li class="portfolio_panel_inner_list_item animationtarget">
                     <div class="portfolio_panel_inner_title">Photoshop</div>
-                    <div>★★★☆☆</div>
+                    <div class="portfolio_panel_inner_rate">★★★☆☆</div>
                     <div class="portfolio_panel_inner_skill">
-                        <img class="portfolio_panel_inner_skill_img" src="../images/icon_photoshop.svg" alt="Photoshopロゴ">
+                        <img class="portfolio_panel_inner_skill_img" src="images/icon_photoshop.svg" alt="Photoshopロゴ">
                         <p class="portfolio_panel_inner_skill_text">当サイトで公開している画像はほぼphotoshopを用い作成した物となっております。<br>
-                            スキルにつきましてはポートフォリオで公開しているWEBサイトの画像は全て自分で1から作成しておりますので<br>
-                            是非そちらをご確認いただければ幸いです。
+                            スキルにつきましてはポートフォリオで公開しているWEBサイトの画像は全て自分で1から作成しております。
                         </p>
                     </div>
                 </li>
-                <li class="portfolio_panel_inner_list_item animationtarget">
+                <!-- <li class="portfolio_panel_inner_list_item animationtarget">
                     <div class="portfolio_panel_inner_title">Illustrator</div>
                     <div>★★☆☆☆</div>
                     <div class="portfolio_panel_inner_skill">
-                        <img class="portfolio_panel_inner_skill_img" src="../images/icon_illustrator.svg" alt="Illastratorロゴ">
+                        <img class="portfolio_panel_inner_skill_img" src="images/icon_illustrator.svg"
+                            alt="Illastratorロゴ">
                         <p class="portfolio_panel_inner_skill_text">当サイトで一部イラレを用いた作品を公開しています。<br>
                             なお、ポートフォリオで公開しているECサイトのスライダー画像は全てイラレを用い1から作成したものです。<br>
                             フォトショと同じくスキルに関しましては是非こちらもご確認いただければ幸いです。
                         </p>
                     </div>
-                </li>
+                </li> -->
                 <!-- <li class="animationtarget">Dreamweaver CS5
                     <p>★★★☆☆</p>
                     <div class="portfolio_panel_inner_skill">
                         <div class="portfolio_panel_inner_skill_img">
-                            <img src="../images/dw.png" alt="Dreamweaverロゴ">
+                            <img src="images/dw.png" alt="Dreamweaverロゴ">
                         </div>
                         <div class="portfolio_panel_inner_skill_text">
                             <p>デザインスクールに通っていた頃はdwを使ってましたが、2020年にVScodeの存在を知り完全に浮気しています。</p>
@@ -217,9 +232,9 @@
                 </li> -->
                 <li class="portfolio_panel_inner_list_item animationtarget">
                     <div class="portfolio_panel_inner_title">Visual&nbsp;Studio&nbsp;Code</div>
-                    <div>★★★☆☆</div>
+                    <div class="portfolio_panel_inner_rate">★★★☆☆</div>
                     <div class="portfolio_panel_inner_skill">
-                        <img class="portfolio_panel_inner_skill_img" src="../images/icon_vscode.svg" alt="VScodeロゴ">
+                        <img class="portfolio_panel_inner_skill_img" src="images/icon_vscode.svg" alt="VScodeロゴ">
                         <p class="portfolio_panel_inner_skill_text">
                             2020年中旬より使用しておりますが、便利過ぎて感動しています。いくつかプラグインも導入し現在も活用中です。
                         </p>
@@ -229,7 +244,7 @@
                     <div class="portfolio_panel_inner_title">Aviutl</div>
                     <div>★★★☆☆</div>
                     <div class="portfolio_panel_inner_skill">
-                        <img class="portfolio_panel_inner_skill_icon_img" src="../images/au.png" alt="Aviutlロゴ">
+                        <img class="portfolio_panel_inner_skill_icon_img" src="images/au.png" alt="Aviutlロゴ">
                         <p class="portfolio_panel_inner_skill_text">
                             自分はネットゲームが好きで、後で復習したい時、反省点を抜粋したい時に使用しております。
                         </p>
@@ -240,12 +255,12 @@
             <ul class="portfolio_panel_future_skill">
                 <li class="portfolio_panel_inner_list_item animationtarget">
                     <div class="portfolio_panel_inner_title">Javascript</div>
-                    <div>★★☆☆☆</div>
+                    <div class="portfolio_panel_inner_rate">★☆☆☆☆</div>
                     <div class="portfolio_panel_inner_skill">
-                        <img class="portfolio_panel_inner_skill_img" src="../images/icon_javascript.svg" alt="jsロゴ">
+                        <img class="portfolio_panel_inner_skill_img" src="images/icon_javascript.svg" alt="jsロゴ">
                         <p class="portfolio_panel_inner_skill_text">
-                            2020年9月から独学で勉強しオブジェクト指向プログラミングについて、<br>
-                            基本的な概念は理解出来ております。<br>
+                            シンプルに弱いです。<br>
+                            基本的な概念は理解出来ており、簡単なDOM操作のみ可能です。<br>
                             今後はvue.js等のフレームワークまで会得出来ればと思っております。<br>
                         </p>
                     </div>
@@ -254,7 +269,7 @@
                     <p>☆☆☆☆☆</p>
                             <div class="portfolio_panel_inner_skill">
                                 <div class="portfolio_panel_inner_skill_img">
-                                    <img src="../images/ts.png" alt="タイプスクリプトロゴ">
+                                    <img src="images/ts.png" alt="タイプスクリプトロゴ">
                                 </div>
                                 <div class="portfolio_panel_inner_skill_text">
                                     <p>Javascriptの独学が落ち着き次第フレームワークの知識の独学と並行して進められればと思っております。</p>
@@ -265,7 +280,7 @@
                     <p>☆☆☆☆☆</p>
                     <div class="portfolio_panel_inner_skill">
                         <div class="portfolio_panel_inner_skill_img">
-                            <img src="../images/wordpress.png" alt="ワードプレスロゴ">
+                            <img src="images/wordpress.png" alt="ワードプレスロゴ">
                         </div>
                         <div class="portfolio_panel_inner_skill_text">
                             <p>まだ使用をした事がありませんが、これから独学で習得する予定です。</p>
@@ -276,7 +291,7 @@
                     <p>☆☆☆☆☆</p>
                     <div class="portfolio_panel_inner_skill">
                         <div class="portfolio_panel_inner_skill_img">
-                            <img src="../images/vue.png" alt="vueロゴ">
+                            <img src="images/vue.png" alt="vueロゴ">
                         </div>
                         <div class="portfolio_panel_inner_skill_text">
                             <p>フレームワークを身に付ける為、Reactとどちらを学ぶべきか悩みましたが<br>
@@ -289,7 +304,7 @@
                     <p>★☆☆☆☆</p>
                     <div class="portfolio_panel_inner_skill">
                         <div class="portfolio_panel_inner_skill_img">
-                            <img src="../images/sass.png" alt="sassロゴ">
+                            <img src="images/sass.png" alt="sassロゴ">
                         </div>
                         <div class="portfolio_panel_inner_skill_text">
                             <p>今以上にネストで書く爆速なコーディングが出来るようにする為、すぐにでも習得しておきたいスキルです。<br>
@@ -301,13 +316,11 @@
         </section>
     </main>
     <!-- 共通フッター -->
-    <footer>
-        <small>
-            Copyright©2023&nbsp;Riku&nbsp;All&nbsp;right&nbsp;Reserved
-        </small>
+    <footer class="portfolio_footer">
+        <div class="portfolio_footer_copy_text">Copyright©2023&nbsp;Riku&nbsp;All&nbsp;right&nbsp;Reserved</div>
     </footer>
     <!-- 共通フッターここまで -->
-    <script src="../js/index.js"></script>
+    <script src="js/index.js"></script>
 </body>
 
 </html>

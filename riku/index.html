@@ -4,11 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>拠り所　リク</title>
-  <link href="css/index.css" rel="stylesheet" type="text/css" />
-  <link href="css/jquery.bxslider.css" rel="stylesheet" type="text/css" />
-  <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
-  <script type="text/javascript" src="js/jquery.bxslider.js"></script>
+  <title>拠り所 リク</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link href="css/index.css" rel="stylesheet">
+  <link href="css/jquery.bxslider.css" rel="stylesheet">
+  <script src="js/jquery-2.1.4.min.js"></script>
+  <script src="js/jquery.bxslider.js"></script>
   <script type="text/javascript">
     $(document).ready(function () {
       var obj = $('.bxslider').bxSlider({
@@ -29,18 +30,18 @@
 
 <body>
   <header>
-    <h1><img src="images/logo.png"></h1>
+    <h1><img src="images/logo.png" alt="リクのロゴ"></h1>
     <div id="menu_icon">
       <span class="line" id="linetarget1"></span>
       <span class="line" id="linetarget2"></span>
       <span class="line" id="linetarget3"></span>
     </div>
     <div id="site_navi">
-      <ul>
-        <li><a href="">お問い合わせ</a></li>
-        <li><a href="">サイトマップ</a></li>
-        <li><a href="">アンケート</a></li>
-        <li><a href="">採用情報</a></li>
+      <ul class="site_navi_list">
+        <li class="site_navi_list_item"><a class="site_navi_list_item_link" href="">お問い合わせ</a></li>
+        <li class="site_navi_list_item"><a class="site_navi_list_item_link" href="">サイトマップ</a></li>
+        <li class="site_navi_list_item"><a class="site_navi_list_item_link" href="">アンケート</a></li>
+        <li class="site_navi_list_item"><a class="site_navi_list_item_link" href="">採用情報</a></li>
       </ul>
     </div>
     <div id="site_navi_smapho">
@@ -54,13 +55,13 @@
     </div>
   </header>
   <main>
-    <div id="mainmenu">
-      <ul>
-        <li class="toppage"><a href=""><img src="images/toppage.png" /></a></li>
-        <li class="menu"><a href=""><img src="images/menu.png" /></a></li>
-        <li class="blog"><a href=""><img src="images/blog.png" /></a></li>
-        <li class="access"><a href=""><img src="images/access.png" /></a></li>
-        <li class="contact"><a href=""><img src="images/contact.png" /></a></li>
+    <div class="mainmenu">
+      <ul class="mainmenu_list">
+        <li class="mainmenu_list_item"><a class="mainmenu_list_item_link" href="">TOP&nbsp;PAGE</a></li>
+        <li class="mainmenu_list_item"><a class="mainmenu_list_item_link" href="">MENU</a></li>
+        <li class="mainmenu_list_item"><a class="mainmenu_list_item_link" href="">BLOG</a></li>
+        <li class="mainmenu_list_item"><a class="mainmenu_list_item_link" href="">ACCESS</a></li>
+        <li class="mainmenu_list_item"><a class="mainmenu_list_item_link" href="">CONTACT</a></li>
       </ul>
     </div>
     <div class="slider">
@@ -110,8 +111,8 @@
         </div>
       </div>
       <div id="maincolumn">
-        <div id="shoplist">
-          <h1><img src="images/kari.png" /></h1>
+        <div class="shoplist">
+          <div class="shop_list_title">新店舗</div>
           <ul>
             <li><img src="images/shop1.jpg" width="100px" height="75px" /><br />
               <p>2020.5.01<br /> CafeRiku<br />印西店<br />グランドオープン</p>
@@ -137,7 +138,7 @@
         </div>
         <div id="search">
           <div id="searchlogo">
-            <h1><img src="images/search_logo.png" /></h1>
+            <div>店舗検索</div>
           </div>
           <div id="searchinner">
             <div id="search_left">
@@ -152,31 +153,35 @@
                   </li>
                 </ul>
                 <p>店舗名<input type="search" size="15" placeholder="店舗名"></p>
-                <div class="checklist">
-                  <ul>
-                    <li>
-                      <p><label for="wi-fi"><img src="images/wifi.png" /></label></p>
-                      <p class="checklisttext"><input type="checkbox" id="wi-fi" name="wi-fi"><br />
-                        <label for="wi-fi">Wi-Fi</label>
-                      </p>
+                <div class="condition">
+                  <ul class="condition_list">
+                    <li class="condition_list_item">
+                      <label class="condition_list_item_icon condition_list_item_icon_wifi" for="wi-fi"></label>
+                      <div class="condition_list_item_right">
+                        <input class="condition_list_item_check" type="checkbox" id="wi-fi" name="wi-fi">
+                        <div>Wi-Fi</div>
+                      </div>
                     </li>
-                    <li>
-                      <p><label for="parking"><img src="images/car.png" /></label></p>
-                      <p class="checklisttext"><input type="checkbox" id="parking" name="parking"><br />
-                        <label for="parking">駐車場</label>
-                      </p>
+                    <li class="condition_list_item">
+                      <label class="condition_list_item_icon condition_list_item_icon_parking" for="parking"></label>
+                      <div class="condition_list_item_right">
+                        <input class="condition_list_item_check" type="checkbox" id="parking" name="parking">
+                        <div>駐車場</div>
+                      </div>
                     </li>
-                    <li>
-                      <p><label for="smoke"><img src="images/smoke.png" /></label></p>
-                      <p class="checklisttext"><input type="checkbox" id="smoke" name="smoke"><br />
-                        <label for="smoke">喫煙室</label>
-                      </p>
+                    <li class="condition_list_item">
+                      <label class="condition_list_item_icon condition_list_item_icon_smoking" for="smoke"></label>
+                      <div class="condition_list_item_right">
+                        <input class="condition_list_item_check" type="checkbox" id="smoke" name="smoke">
+                        <div>喫煙室</div>
+                      </div>
                     </li>
-                    <li>
-                      <p><label for="lunch"><img src="images/lunch.png" /></label></p>
-                      <p class="checklisttext"><input type="checkbox" id="lunch" name="lunch"><br />
-                        <label for="lunch">ランチ</label>
-                      </p>
+                    <li class="condition_list_item">
+                      <label class="condition_list_item_icon condition_list_item_icon_lunch" for="lunch"></label>
+                      <div class="condition_list_item_right">
+                        <input class="condition_list_item_check" type="checkbox" id="lunch" name="lunch">
+                        <div>ランチ</div>
+                      </div>
                     </li>
                   </ul>
                   <p><input type="image" src="images/search_btn.gif" /></p>
