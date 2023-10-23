@@ -13,15 +13,15 @@
 	height: 100%;
 }
 
-.portfolio_panel_title_like{
+.portfolio_panel_title_like {
 	position: relative;
 }
 
-.portfolio_panel_inner_like{
+.portfolio_panel_inner_like {
 	position: relative;
 }
 
-.portfolio_panel_inner_like_list_item:nth-child(n+2){
+.portfolio_panel_inner_like_list_item:nth-child(n+2) {
 	margin-top: 30px;
 }
 
@@ -61,7 +61,7 @@
 	opacity: 1;
 }
 
-.portfolio_panel_inner_like_list_item_body{
+.portfolio_panel_inner_like_list_item_body {
 	padding-left: 16px;
 }
 
@@ -75,11 +75,23 @@
 	width: 100px;
 }
 
-.portfolio_panel_inner_skill_icon_img {}
-
 .portfolio_panel_inner_skill_text {
 	text-align: start;
 	width: 100%;
+}
+
+.portfolio_panel_inner_skill_library_list {
+	padding-left: 10px;
+}
+
+.portfolio_panel_inner_skill_library_list_item{
+	position: relative;
+	padding-left: 10px;
+}
+.portfolio_panel_inner_skill_library_list_item::before {
+	content: "-";
+	position: absolute;
+	left: 0;
 }
 
 .portfolio_panel_future_skill {
