@@ -17,6 +17,7 @@
 
 .portfolio_panel_inner_list_item_info_soft_list {
 	display: flex;
+	flex-wrap: wrap;
 }
 
 .portfolio_panel_inner_list_item_info_soft_list_item::after {

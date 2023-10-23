@@ -132,13 +132,15 @@ body {
     top: 66px;
     left: 0;
     opacity: 0;
-    transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    visibility: hidden;
 }
 
 .nav_list_sp_wrapper_active {
     opacity: 1;
     /* overflow: hidden; */
     display: block;
+    visibility: visible;
 }
 
 .nav_list_sp {
@@ -157,12 +159,14 @@ body {
 .nav_list_sp li:nth-child(n+2) {
     margin-top: 40px;
 }
-.portfolio_footer{
+
+.portfolio_footer {
     text-align: center;
 }
+
 .portfolio_footer_copy_text {
-    text-align: 12px;
     color: #ffffff;
+    padding: 10px 0;
     word-break: break-all;
     overflow-wrap: break-word;
 }
