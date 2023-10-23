@@ -1,2 +1,0 @@
-.nav_list_sp_wrapper
-display:none;で消してる要素のtransitionの使い方がわからずopacityでふわっと表示を対応している
