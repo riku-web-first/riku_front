@@ -1,6 +1,10 @@
 /* 共通CSSここから */
 html {
-    background-color: #000022;
+    background-color: rgba(0, 0, 0, 0.8);
+    background-image: url(../images/portfolio_body_background.jpg);
+    background-attachment: fixed;
+    background-size: 100%;
+    background-blend-mode: darken;
 }
 
 body {
@@ -36,13 +40,6 @@ body {
     left: 10px;
 }
 
-.portfolio_panel_header {
-    font-size: 0;
-    box-sizing: border-box;
-    height: 66px;
-    width: 100%;
-}
-
 .portfolio_header_link {
     display: block;
 }
@@ -52,10 +49,18 @@ body {
 }
 
 .portfolio_panel {
-    background-color: #191970;
-    border: solid 2px #ffffff;
+    background-color: rgb(189 0 255 / 6%);
+    border: solid 2px #aaaaaa;
     border-radius: 3px;
     padding: 16px 6px 6px;
+}
+
+.portfolio_panel_header {
+    font-size: 0;
+    background-color: #000000;
+    box-sizing: border-box;
+    height: 66px;
+    width: 100%;
 }
 
 .portfolio_panel_title {
@@ -188,6 +193,7 @@ body {
     }
 
     .portfolio_panel_header {
+        background-color: rgb(189 0 255 / 6%);
         height: 90px;
     }
 
