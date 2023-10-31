@@ -82,7 +82,7 @@
                 </div>
                 <ul class="portfolio_works_list">
                     <li class="portfolio_works_list_item">
-                        <img class="portfolio_works_list_item_sample" src="" alt="">
+                        <img class="portfolio_works_list_item_sample" src="images/kari.jpg" alt="">
                         <div class="portfolio_works_list_item_text">Riku'sPortfolio site</div>
                     </li>
                     <li class="portfolio_works_list_item">
@@ -106,6 +106,35 @@
                         <div class="portfolio_works_list_item_text"></div>
                     </li>
                 </ul>
+            </div>
+        </div>
+        <div class="portfolio_overlay">
+            <div class="portfolio_modal_content">
+                <div class="portfolio_modal_left">
+                    <div class="portfolio_modal_title">Riku's Portfolio site</div>
+                    <p class="portfolio_modal_text">当ポートフォリオサイトです&nbsp;あとでテキスト入れる＠当ポートフォリオサイトです&nbsp;あとでテキスト入れる＠当ポートフォリオサイトです&nbsp;あとでテキスト入れる＠当ポートフォリオサイトです&nbsp;あとでテキスト入れる＠当ポートフォリオサイトです&nbsp;あとでテキスト入れる＠当ポートフォリオサイトです&nbsp;あとでテキスト入れる＠当ポートフォリオサイトです&nbsp;あとでテキスト入れる＠当ポートフォリオサイトです&nbsp;あとでテキスト入れる＠当ポートフォリオサイトです&nbsp;あとでテキスト入れる＠当ポートフォリオサイトです&nbsp;あとでテキスト入れる＠当ポートフォリオサイトです&nbsp;あとでテキスト入れる＠当ポートフォリオサイトです&nbsp;あとでテキスト入れる＠</p>
+                    <ul class="portfolio_modal_detail_list">
+                        <li class="portfolio_modal_detail_item">
+                            <a class="portfolio_modal_detail_item_link" href="">
+                                <img class="portfolio_modal_detail_item_link_icon" src="" alt="">
+                                <span class="portfolio_modal_detail_item_link_text">Demo</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="portfolio_modal_detail_used_languages_title">使用言語</div>
+                    <div class="portfolio_modal_detail_used_languages_text">HTML/CSS/JavaScript</div>
+                </div>
+                <div class="portfolio_modal_right">
+                    <ul class="portfolio_modal_sample_list">
+                        <li class="portfolio_modal_sample_list_item">
+                            <img class="portfolio_modal_sample_list_item_img" src="images/kari.jpg" alt="">
+                        </li>
+                        <li class="portfolio_modal_sample_list_item">
+                            <img class="portfolio_modal_sample_list_item_img" src="images/kari.jpg" alt="">
+                        </li>
+                    </ul>
+                    <img class="portfolio_modal_sample" src="images/kari.jpg" alt="">
+                </div>
             </div>
         </div>
         <div class="portfolio_content">
@@ -276,10 +305,20 @@
                 <p class="portfolio_text">
                     最後までご覧いただきありがとうございました。このサイトを通して私のことを少しでも知っていただけたのなら嬉しいです。もしこのサイトや私について何かコメントがありましたら、下記フォームをご利用ください。
                 </p>
-                <form class="portfolio_contact" action="post">
-                    <input class="portfolio_contact_name" type="text" placeholder="Name">
-                    <input class="portfolio_contact_email" type="email" placeholder="Email">
-                    <textarea class="porfolio_contact_text" name="" id="" cols="30" rows="10" placeholder="Comment"></textarea>
+                <form class="portfolio_contact" action="#" method="post">
+                    <div class="portfolio_contact_name_content">
+                        <label class="porfolio_contact_label" for="name">Name</label>
+                        <input class="portfolio_contact_name" type="text" placeholder="" id="name" name="name">
+                    </div>
+                    <div class="portfolio_contact_email_content">
+                        <label class="porfolio_contact_label" for="email">Email</label>
+                        <input class="portfolio_contact_email" type="email" placeholder="" name="email">
+                    </div>
+                    <div>
+                        <label class="porfolio_contact_label" for="text">Comment</label>
+                        <textarea class="porfolio_contact_text" name="" id="" cols="30" rows="10" name="textarea">
+                    </textarea>
+                    </div>
                     <button class="portfolio_contact_submit" type="submit">SEND</button>
                 </form>
             </div>
@@ -287,11 +326,13 @@
     </main>
     <footer class="portfolio_content_footer">
         <div class="portfolio_footer_text">Tahnk you for coming<wbr>^-^</div>
-        <div class="portfolio_footer_copy">
-            <div class="portfolio_footer_copy_text"></div>
-            <div class="portfolio_footer_copy_top_button"></div>
-        </div>
     </footer>
+    <div class="portfolio_footer_copy">
+        <div class="portfolio_footer_copy_text">Copyright©2023 Riku All right Reserved</div>
+        <a class="portfolio_footer_copy_top_button" href="#">
+            <img class="portfolio_footer_copy_top_button_img" src="images/chevron-up_ffffff_regular.svg" alt="">
+        </a>
+    </div>
     <script src="js/script.js"></script>
     <!-- <script>
         const LoadElm = document.getElementById('portfolio_opening_wrapper');
