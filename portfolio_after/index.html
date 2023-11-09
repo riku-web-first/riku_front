@@ -36,10 +36,10 @@
         </ul>
     </header>
     <div class="portfolio_firstview">
-        <h1 class="portfolio_firstview_title">Riku's Portfoliosite!</h1>
-        <div class="portfolio_firstview_title_sub">RIKU Engineering Laboratory</div>
+        <h1 id="" class="portfolio_firstview_title first_animationtarget">Riku's Portfoliosite!</h1>
+        <div class="portfolio_firstview_title_sub first_animationtarget">RIKU Engineering Laboratory</div>
         <img src="" alt="">
-        <a href="#portfolio_container" class="portfolio_firstview_down_button">
+        <a href="#portfolio_container" class="portfolio_firstview_down_button first_animationtarget">
             <img class="portfolio_firstview_down_button_icon" src="images/chevron-down.svg" alt="">
         </a>
     </div>
@@ -81,27 +81,27 @@
                     現在閲覧いただいている当ポートフォリオサイトはテンプレートは使用せず、ゼロイチで作成しているため少しでも参考になれば嬉しいです。
                 </div>
                 <ul class="portfolio_works_list">
-                    <li class="portfolio_works_list_item">
+                    <li class="portfolio_works_list_item workanimationtarget">
                         <img class="portfolio_works_list_item_sample" src="images/kari.jpg" alt="">
                         <div class="portfolio_works_list_item_text">Riku'sPortfolio site</div>
                     </li>
-                    <li class="portfolio_works_list_item">
+                    <li class="portfolio_works_list_item workanimationtarget">
                         <img class="portfolio_works_list_item_sample" src="" alt="">
                         <div class="portfolio_works_list_item_text"></div>
                     </li>
-                    <li class="portfolio_works_list_item">
+                    <li class="portfolio_works_list_item workanimationtarget">
                         <img class="portfolio_works_list_item_sample" src="" alt="">
                         <div class="portfolio_works_list_item_text"></div>
                     </li>
-                    <li class="portfolio_works_list_item">
+                    <li class="portfolio_works_list_item workanimationtarget">
                         <img class="portfolio_works_list_item_sample" src="" alt="">
                         <div class="portfolio_works_list_item_text"></div>
                     </li>
-                    <li class="portfolio_works_list_item">
+                    <li class="portfolio_works_list_item workanimationtarget">
                         <img class="portfolio_works_list_item_sample" src="" alt="">
                         <div class="portfolio_works_list_item_text"></div>
                     </li>
-                    <li class="portfolio_works_list_item">
+                    <li class="portfolio_works_list_item workanimationtarget">
                         <img class="portfolio_works_list_item_sample" src="" alt="">
                         <div class="portfolio_works_list_item_text"></div>
                     </li>
@@ -112,7 +112,9 @@
             <div class="portfolio_modal_content">
                 <div class="portfolio_modal_left">
                     <div class="portfolio_modal_title">Riku's Portfolio site</div>
-                    <p class="portfolio_modal_text">当ポートフォリオサイトです&nbsp;あとでテキスト入れる＠当ポートフォリオサイトです&nbsp;あとでテキスト入れる＠当ポートフォリオサイトです&nbsp;あとでテキスト入れる＠当ポートフォリオサイトです&nbsp;あとでテキスト入れる＠当ポートフォリオサイトです&nbsp;あとでテキスト入れる＠当ポートフォリオサイトです&nbsp;あとでテキスト入れる＠当ポートフォリオサイトです&nbsp;あとでテキスト入れる＠当ポートフォリオサイトです&nbsp;あとでテキスト入れる＠当ポートフォリオサイトです&nbsp;あとでテキスト入れる＠当ポートフォリオサイトです&nbsp;あとでテキスト入れる＠当ポートフォリオサイトです&nbsp;あとでテキスト入れる＠当ポートフォリオサイトです&nbsp;あとでテキスト入れる＠</p>
+                    <p class="portfolio_modal_text">
+                        当ポートフォリオサイトです&nbsp;あとでテキスト入れる＠当ポートフォリオサイトです&nbsp;あとでテキスト入れる＠当ポートフォリオサイトです&nbsp;あとでテキスト入れる＠当ポートフォリオサイトです&nbsp;あとでテキスト入れる＠当ポートフォリオサイトです&nbsp;あとでテキスト入れる＠当ポートフォリオサイトです&nbsp;あとでテキスト入れる＠当ポートフォリオサイトです&nbsp;あとでテキスト入れる＠当ポートフォリオサイトです&nbsp;あとでテキスト入れる＠当ポートフォリオサイトです&nbsp;あとでテキスト入れる＠当ポートフォリオサイトです&nbsp;あとでテキスト入れる＠当ポートフォリオサイトです&nbsp;あとでテキスト入れる＠当ポートフォリオサイトです&nbsp;あとでテキスト入れる＠
+                    </p>
                     <ul class="portfolio_modal_detail_list">
                         <li class="portfolio_modal_detail_item">
                             <a class="portfolio_modal_detail_item_link" href="">
@@ -307,17 +309,19 @@
                 </p>
                 <form class="portfolio_contact" action="#" method="post">
                     <div class="portfolio_contact_name_content">
-                        <label class="porfolio_contact_label" for="name">Name</label>
-                        <input class="portfolio_contact_name" type="text" placeholder="" id="name" name="name">
+                        <input class="portfolio_contact_input" type="text" placeholder="" id="name" name="name"
+                            required>
+                        <label id="contact_label_name" class="portfolio_contact_label" for="name">Name</label>
                     </div>
                     <div class="portfolio_contact_email_content">
-                        <label class="porfolio_contact_label" for="email">Email</label>
-                        <input class="portfolio_contact_email" type="email" placeholder="" name="email">
+                        <input class="portfolio_contact_input" type="email" placeholder="" id="email" name="email"
+                            required>
+                        <label id="contact_label_email" class="portfolio_contact_label" for="email">Email</label>
                     </div>
-                    <div>
-                        <label class="porfolio_contact_label" for="text">Comment</label>
-                        <textarea class="porfolio_contact_text" name="" id="" cols="30" rows="10" name="textarea">
-                    </textarea>
+                    <div class="portfolio_contact_text_content">
+                        <textarea class="portfolio_contact_input" name="" id="text" cols="30" rows="10"
+                            name="textarea"></textarea>
+                        <label id="contact_label_text" class="portfolio_contact_label" for="text">Comment</label>
                     </div>
                     <button class="portfolio_contact_submit" type="submit">SEND</button>
                 </form>

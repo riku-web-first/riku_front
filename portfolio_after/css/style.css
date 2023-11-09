@@ -91,13 +91,26 @@ body {
 .portfolio_firstview_title {
     color: #ffffff;
     font-size: 40px;
-    /* font-weight: bold; */
+    transform: scale(0);
+    transition: transform 0.6s;
+}
+
+.portfolio_firstview_title.show {
+    transform: scale(1.2);
 }
 
 .portfolio_firstview_title_sub {
     color: #ffffff;
     font-size: 20px;
     margin-top: 20px;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.8s;
+}
+
+.portfolio_firstview_title_sub.show {
+    transform: translateY(-20px);
+    opacity: 1;
 }
 
 .portfolio_firstview_down_button {
@@ -107,8 +120,15 @@ body {
     border-radius: 50%;
     display: inline-block;
     position: relative;
+    transition: all 0.8s;
+    opacity: 0;
     animation: down_button infinite 1.5s;
+    transition: all 0.8s;
     margin-top: 14px;
+}
+
+.portfolio_firstview_down_button.show {
+    opacity: 1;
 }
 
 .portfolio_firstview_down_button_icon {
@@ -221,11 +241,28 @@ body {
 
 .portfolio_works_list_item {
     background-color: #a7a2ff;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 0.8s;
+}
+
+.portfolio_works_list_item.workanimationtarget.show {
+    transform: translateY(0);
+    opacity: 1;
 }
 
 .portfolio_works_list_item_sample {
     width: 100%;
     cursor: pointer;
+}
+
+.portfolio_overlay {
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .portfolio_modal_content {
@@ -235,7 +272,6 @@ body {
     padding: 20px;
     display: flex;
     justify-content: space-between;
-    margin: 0 auto;
 }
 
 .portfolio_modal_left {
@@ -245,7 +281,31 @@ body {
 .portfolio_modal_title {
     font-size: 20px;
     font-weight: bold;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.portfolio_modal_title::before {
+    content: "";
+    display: block;
+    background-color: #333333;
+    height: 1px;
+    flex-grow: 1;
+    margin-right: 20px;
+}
+
+.portfolio_modal_title::after {
+    content: "";
+    display: block;
+    background-color: #333333;
+    height: 1px;
+    flex-grow: 1;
+    margin-left: 20px;
+}
+
+.portfolio_modal_title::after {}
 
 .portfolio_modal_text {
     font-size: 16px;
@@ -297,12 +357,6 @@ body {
     width: 100%;
     max-width: 700px;
     margin-top: 10px;
-}
-
-.portfolio_overlay {
-    background-color: rgba(0, 0, 0, 0.2);
-    width: 100vw;
-    min-height: 100vh;
 }
 
 .portfolio_skill_list {
@@ -424,18 +478,36 @@ body {
     margin-left: 16px;
 }
 
-.porfolio_contact_label {
+.portfolio_contact_text_content {
+    position: relative;
+    margin-top: 36px;
+}
+
+.portfolio_contact_label {
     font-size: 16px;
     color: #333333;
     position: absolute;
     top: 0;
     left: 0;
     cursor: text;
+    transition: transform 0.2s, color 0.2s, font-size 0.2s;
 }
 
-.portfolio_contact_name,
+.portfolio_contact_input:focus+.portfolio_contact_label {
+    font-size: 12px;
+    transform: translateY(-22px);
+    color: #a7a2ff;
+}
+
+.portfolio_contact_label.active {
+    font-size: 12px;
+    transform: translateY(-22px);
+    color: #a7a2ff;
+}
+
+.portfolio_contact_input,
 .portfolio_contact_email {
-    padding: 6px;
+    padding: 6px 6px 6px 0;
     border: 0;
     border-bottom: 2px solid #a7a2ff;
     background-color: transparent;
@@ -446,22 +518,19 @@ body {
     border: 0;
     border-bottom: 2px solid #a7a2ff;
     background-color: transparent;
+    padding: 0;
+    display: block;
+    width: 100%;
+    resize: none;
 }
 
-.portfolio_contact_name:active,
-.portfolio_contact_name:focus,
+.portfolio_contact_input:active,
+.portfolio_contact_input:focus,
 .portfolio_contact_email:active,
 .portfolio_contact_email:focus,
 .porfolio_contact_text:active,
 .porfolio_contact_text:focus {
     outline: none;
-}
-
-.porfolio_contact_text {
-    display: block;
-    width: 100%;
-    resize: none;
-    margin-top: 16px;
 }
 
 .portfolio_contact_submit {
@@ -524,11 +593,12 @@ body {
     .portfolio_modal_content {
         display: block;
     }
-    .portfolio_modal_left{
+
+    .portfolio_modal_left {
         width: auto;
     }
 
-    .portfolio_modal_right{
+    .portfolio_modal_right {
         width: auto;
     }
 }
