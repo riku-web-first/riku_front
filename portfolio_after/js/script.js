@@ -53,6 +53,9 @@ function ShowAnimation() {
     const $targetElement = document.querySelectorAll('.animationtarget');
     const $FirstTargetElement = document.querySelectorAll('.first_animationtarget');
     let $WorkTargetElement = document.querySelectorAll('.workanimationtarget');
+    const $WorksOverlay = document.getElementById('portfolio_overlay');
+    let $ModalItem = document.getElementById('modal_item');
+    const $MainElement = document.getElementById('portfolio_container');
     document.addEventListener('scroll', function () {
         for (i = 0; i < $targetElement.length; i++) {
             const $getElementDistance = $targetElement[i].getBoundingClientRect().top + $targetElement[i].clientHeight * 0.6
@@ -91,7 +94,13 @@ function ShowAnimation() {
             }
         }
     })
-
+    for (let i = 0; i < $WorkTargetElement.length; i++) {
+        $WorkTargetElement[i].addEventListener('click', function () {
+            $ModalItem.classList.add('active');
+            $WorksOverlay.classList.add('active');
+            // $MainElement.style.overflow = 'hidden';
+        })
+    }
+    console.log('Click event triggered');
 }
-
 ShowAnimation();
