@@ -4,7 +4,7 @@ body {
 
 .portfolio_opening_wrapper {
     position: fixed;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     background-color: #ffffff;
     display: flex;
@@ -159,6 +159,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0 10px;
 }
 
 .portfolio_content_inner {
@@ -280,6 +281,7 @@ body {
     top: 0;
     left: 0;
     opacity: 1;
+    z-index: 3;
 }
 
 .portfolio_modal_content {
@@ -582,6 +584,7 @@ body {
     font-size: 34px;
     font-weight: bold;
     white-space: nowrap;
+    word-break: break-all;
 }
 
 .portfolio_footer_copy {
@@ -609,6 +612,12 @@ body {
 }
 
 @media screen and (max-width:767px) {
+
+    .portfolio_modal_content {
+        height: 100vh;
+        overflow: scroll;
+    }
+
     .portfolio_menu_list_pc {
         display: none;
     }
@@ -632,13 +641,6 @@ body {
     }
 }
 
-@media screen and (max-width:519px) {
-    .portfolio_skill_list {
-        grid-template-columns: 1fr;
-    }
-}
-
-
 @media screen and (min-width:768px) {
     .portfolio_menu_list_pc {
         display: flex;
@@ -646,5 +648,28 @@ body {
 
     .portfolio_menu_list_sp {
         display: none;
+    }
+}
+
+@media screen and (max-width:519px) {
+
+    .portfolio_firstview_title {
+        font-size: 32px;
+        white-space: nowrap;
+        word-break: break-all;
+    }
+
+    .portfolio_firstview_title.show {
+        transform: scale(1);
+        white-space: nowrap;
+        word-break: break-all;
+    }
+
+    .portfolio_footer_text {
+        font-size: 28px;
+    }
+
+    .portfolio_skill_list {
+        grid-template-columns: 1fr;
     }
 }

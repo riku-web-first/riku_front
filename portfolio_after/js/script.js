@@ -101,6 +101,17 @@ function ShowAnimation() {
             // $MainElement.style.overflow = 'hidden';
         })
     }
-    console.log('Click event triggered');
+    $WorksOverlay.addEventListener('click', function (e) {
+        // その要素、祖先に#modal_itemが存在しないか判定
+        // クリックされた要素が #modal_item 要素またはその子孫でない場合、trueとなりモーダルが閉じる
+        // モーダルの中身は#modal_itemでclosestメソッドで、
+        // <div id="modal_item" class="portfolio_modal_content">が返るためifの条件式はfalseとなる。
+        // e.targetは<div id="portfolio_overlay" class="portfolio_overlay">だけを参照してるわけではなく子要素も参照している！
+        if (e.target.closest('#modal_item') === null) {
+            $ModalItem.classList.remove('active');
+            $WorksOverlay.classList.remove('active');
+        }
+    })
+
 }
 ShowAnimation();
