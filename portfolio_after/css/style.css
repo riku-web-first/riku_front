@@ -341,7 +341,9 @@ body {
     background-color: #a7a2ff;
     transform: translateY(100px);
     opacity: 0;
+    position: relative;
     transition: all 0.8s;
+    cursor: pointer;
 }
 
 .portfolio_works_list_item.workanimationtarget.show {
@@ -351,7 +353,6 @@ body {
 
 .portfolio_works_list_item_sample {
     width: 100%;
-    cursor: pointer;
 }
 
 .portfolio_overlay {
@@ -525,6 +526,13 @@ body {
     font-size: 16px;
     color: #333333;
     text-align: center;
+    background-color: #d3d3d3;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 .portfolio_skill_list_item_icon {
@@ -635,13 +643,23 @@ body {
     margin: 20px auto 0;
 }
 
+.portfolio_profile_feeling_title.show {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.portfolio_profile_feeling.show {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
 .portfolio_content_like_list_item {
     font-size: 16px;
     color: #333333;
 }
 
 .portfolio_text_contact {
-    width: 75%;
+    max-width: 850px;
     margin: 46px auto 0;
     transform: translateY(100px);
     opacity: 0;
@@ -652,6 +670,7 @@ body {
     transform: translateY(100px);
     opacity: 0;
     transition: all 0.8s;
+    margin-top: 30px;
 }
 
 .portfolio_text_contact.show {
@@ -794,7 +813,7 @@ body {
 @media screen and (max-width:767px) {
 
     .portfolio_modal_content {
-        height: 100vh;
+        height: 90vh;
         overflow: scroll;
     }
 
@@ -816,7 +835,7 @@ body {
 }
 
 @media screen and (max-width:959px) {
-    .portfolio_skill_list {
+    .portfolio_skill_list,.portfolio_works_list {
         grid-template-columns: 1fr 1fr;
     }
 }

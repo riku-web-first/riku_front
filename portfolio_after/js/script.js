@@ -55,7 +55,7 @@ function ShowAnimation() {
                     setTimeout(function () {
                         item.classList.add('show')
                     }, 1000)
-                }else if(index===2){
+                } else if (index === 2) {
                     setTimeout(function () {
                         item.classList.add('show')
                     }, 1500)
@@ -69,8 +69,6 @@ function ShowAnimation() {
             console.log($FirstTargetElement)
         }, 1000)
     })
-
-
     document.addEventListener('scroll', function () {
         for (let i = 0; i < $SkillTargetElement.length; i++) {
             const $getSkillElementDistance = $SkillTargetElement[i].getBoundingClientRect().top + $SkillTargetElement[i].clientHeight * 0.6
@@ -96,14 +94,17 @@ ShowAnimation();
 
 function Modal() {
     const $WorksOverlay = document.getElementById('portfolio_overlay');
-    const CloseButton = document.getElementById('modal_close_button');
+    const CloseButton = document.querySelectorAll('.portfolio_modal_close');
     let $ModalItem = document.querySelectorAll('.modal_item');
     let $WorkTargetElement = document.querySelectorAll('.workanimationtarget');
-    CloseButton.addEventListener('click', function () {
-        $WorksOverlay.classList.remove('active')
-        $ModalItem.classList.remove('active')
+    CloseButton.forEach(function (item) {
+        item.addEventListener('click', function () {
+            $WorksOverlay.classList.remove('active');
+            $ModalItem.forEach(function (item) {
+                item.classList.remove('active');
+            })
+        })
     })
-    console.log(CloseButton)
     $WorksOverlay.addEventListener('click', function (e) {
         // その要素、祖先に.modal_itemが存在しないか判定
         // 存在しない場合、nullとなり.modalitemのactive classが削除される
