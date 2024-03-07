@@ -2,6 +2,10 @@
 	margin-top: 6px;
 }
 
+.portfolio_panel_inner_list_item:nth-of-type(n+2) {
+	margin-top: 44px;
+}
+
 .portfolio_panel_inner_list_item_info {
 	font-size: 14px;
 }
@@ -11,7 +15,7 @@
 	font-size: 16px;
 }
 
-.portfolio_panel_inner_list_item_info_attention{
+.portfolio_panel_inner_list_item_info_attention {
 	padding: 6px 0;
 }
 
@@ -34,6 +38,7 @@
 }
 
 .portfolio_panel_inner_list_item_link {
+	display: inline-block;
 	width: 200px;
 	height: 200px;
 	overflow: hidden;
