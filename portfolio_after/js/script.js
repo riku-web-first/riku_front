@@ -139,7 +139,13 @@ Modal()
 
 function ShowSampleImage() {
     let SampleImage = document.querySelectorAll('.portfolio_modal_sample_list_item_img');
-    let SampleImageList = ['images/kari.jpg', 'images/kari2.jpg']
+    let SampleImageList = [
+        'images/portfolio_modal_sample_list_item_img1.png',
+        'images/portfolio_modal_sample_list_item_img2.png',
+        'images/portfolio_modal_sample_list_item_img3.png',
+        'images/portfolio_modal_sample_list_item_img4.png',
+        'images/portfolio_modal_sample_list_item_img5.png'
+    ]
     const MainSampleImage = document.querySelector('.portfolio_modal_sample');
     SampleImage.forEach(function (item, index) {
         item.onmouseover = function () {
@@ -147,6 +153,7 @@ function ShowSampleImage() {
             MainSampleImage.setAttribute('src', SampleImageList[index]);
         }
     })
+    console.log(SampleImage)
 }
 ShowSampleImage();
 

@@ -53,9 +53,13 @@
 	transform: scale(1.2);
 }
 
-@media screen and (min-width:768px) {
-	.portfolio_contents {}
+.portfolio_panel_inner_list_item_link_git{
+	padding: 10px 0;
+	display: block;
+	text-decoration: underline;
+}
 
+@media screen and (min-width:768px) {
 	.portfolio_panel_inner_list_item_info {
 		margin-left: 10px;
 	}

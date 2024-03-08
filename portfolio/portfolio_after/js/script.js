@@ -18,6 +18,145 @@ function OpeningAnimation() {
 }
 OpeningAnimation()
 
+function OpenList() {
+    document.getElementById('sp_menu_opener').addEventListener('click', function () {
+        document.getElementById('menu_list_sp').classList.add('active')
+        document.querySelector('.portfolio_menu_list_sp_overlay').classList.add('active')
+    })
+    document.querySelector('.portfolio_menu_list_sp_overlay').addEventListener('click', function (e) {
+        if (e.target.closest('.portfolio_menu_list_sp') === null) {
+            document.querySelector('.portfolio_menu_list_sp_overlay').classList.remove('active');
+            document.querySelector('.portfolio_menu_list_sp').classList.remove('active');
+        }
+    })
+}
+OpenList()
+
+function ShowAnimation() {
+    // const $targetElement = document.querySelectorAll('.animationtarget');
+    const $FirstTargetElement = document.querySelectorAll('.first_animationtarget');
+    let $SkillTargetElement = document.querySelectorAll('.skillanimationtarget');
+    let $ProfileAnimation = document.querySelectorAll('.animation_target');
+    document.addEventListener('scroll', function () {
+        for (i = 0; i < $ProfileAnimation.length; i++) {
+            const $getElementDistance = $ProfileAnimation[i].getBoundingClientRect().top + $ProfileAnimation[i].clientHeight * 0.6
+            if (window.innerHeight > $getElementDistance) {
+                $ProfileAnimation[i].classList.add('show');
+            }
+        }
+    })
+
+    window.addEventListener('load', function () {
+        setTimeout(function () {
+            $FirstTargetElement.forEach(function (item, index) {
+                if (index === 0) {
+                    item.classList.add('show')
+                } else if (index === 1) {
+                    setTimeout(function () {
+                        item.classList.add('show')
+                    }, 1000)
+                } else if (index === 2) {
+                    setTimeout(function () {
+                        item.classList.add('show')
+                    }, 1500)
+                }
+                else {
+                    setTimeout(function () {
+                        item.classList.add('show')
+                    }, 2000)
+                }
+            })
+            console.log($FirstTargetElement)
+        }, 1000)
+    })
+    document.addEventListener('scroll', function () {
+        for (let i = 0; i < $SkillTargetElement.length; i++) {
+            const $getSkillElementDistance = $SkillTargetElement[i].getBoundingClientRect().top + $SkillTargetElement[i].clientHeight * 0.6
+            if (window.innerWidth <= 959) {
+                if (window.innerHeight > $getSkillElementDistance) {
+                    $SkillTargetElement[i].classList.add('show')
+                }
+            } else {
+                if (window.innerHeight > $getSkillElementDistance) {
+                    setTimeout(function () {
+                        $SkillTargetElement[i].classList.add('show')
+                        // 要素一つ一つに遅延させて表示させてるから、
+                        // if文でビューポート959px以下の条件を指定しないとレスポンシブだと要素が増えるにつれて
+                        // 300ミリ*n秒掛かって表示されてしまう
+                    }, 1000 * i * 0.3)
+                }
+            }
+        }
+    })
+
+}
+ShowAnimation();
+
+function Modal() {
+    const $WorksOverlay = document.getElementById('portfolio_overlay');
+    const CloseButton = document.querySelectorAll('.portfolio_modal_close');
+    let $ModalItem = document.querySelectorAll('.modal_item');
+    let $WorkTargetElement = document.querySelectorAll('.workanimationtarget');
+    CloseButton.forEach(function (item) {
+        item.addEventListener('click', function () {
+            $WorksOverlay.classList.remove('active');
+            $ModalItem.forEach(function (item) {
+                item.classList.remove('active');
+            })
+        })
+    })
+    $WorksOverlay.addEventListener('click', function (e) {
+        // その要素、祖先に.modal_itemが存在しないか判定
+        // 存在しない場合、nullとなり.modalitemのactive classが削除される
+        // e.targetは<div id="portfolio_overlay" class="portfolio_overlay">だけを参照してるわけではなく子要素も参照している！
+        if (e.target.closest('.modal_item') === null) {
+            $ModalItem.forEach(function (item) {
+                item.classList.remove('active');
+            })
+            $WorksOverlay.classList.remove('active');
+        }
+    })
+    document.addEventListener('scroll', function () {
+        for (let i = 0; i < $WorkTargetElement.length; i++) {
+            // ビューポートの最上辺から要素の最上辺の距離の数値 + 要素の高さ * 0.6
+            const $getWorkElementDistance = $WorkTargetElement[i].getBoundingClientRect().top + $WorkTargetElement[i].clientHeight * 0.6
+            // もし$getWorkElementDistanceよりビューポートの高さのほうが大きければ
+            if (window.innerHeight > $getWorkElementDistance) {
+                setTimeout(function () {
+                    $WorkTargetElement[i].classList.add('show')
+                }, 1000 * i * 0.3)
+            }
+        }
+    })
+    for (let i = 0; i < $WorkTargetElement.length; i++) {
+        $WorkTargetElement[i].addEventListener('click', function () {
+            $ModalItem[i].classList.add('active');
+            $WorksOverlay.classList.add('active');
+        })
+    }
+}
+Modal()
+
+function ShowSampleImage() {
+    let SampleImage = document.querySelectorAll('.portfolio_modal_sample_list_item_img');
+    let SampleImageList = [
+        'images/portfolio_modal_sample_list_item_img1.png',
+        'images/portfolio_modal_sample_list_item_img2.png',
+        'images/portfolio_modal_sample_list_item_img3.png',
+        'images/portfolio_modal_sample_list_item_img4.png',
+        'images/portfolio_modal_sample_list_item_img5.png'
+    ]
+    const MainSampleImage = document.querySelector('.portfolio_modal_sample');
+    SampleImage.forEach(function (item, index) {
+        item.onmouseover = function () {
+            // なぜSampleImageのインデックス番号を取得しているのにSampleImage変数でindexが使用出来ているのか言語化不可
+            MainSampleImage.setAttribute('src', SampleImageList[index]);
+        }
+    })
+    console.log(SampleImage)
+}
+ShowSampleImage();
+
 function FormInputChecking() {
     let NameElm = document.getElementById('name');
     let EmailElm = document.getElementById('email');
@@ -48,59 +187,3 @@ function FormInputChecking() {
     })
 }
 FormInputChecking();
-
-function ShowAnimation() {
-    const $targetElement = document.querySelectorAll('.animationtarget');
-    const $FirstTargetElement = document.querySelectorAll('.first_animationtarget');
-    let $WorkTargetElement = document.querySelectorAll('.workanimationtarget');
-    const $WorksOverlay = document.getElementById('portfolio_overlay');
-    let $ModalItem = document.getElementById('modal_item');
-    const $MainElement = document.getElementById('portfolio_container');
-    document.addEventListener('scroll', function () {
-        for (i = 0; i < $targetElement.length; i++) {
-            const $getElementDistance = $targetElement[i].getBoundingClientRect().top + $targetElement[i].clientHeight * 0.6
-            if (window.innerHeight > $getElementDistance) {
-                $targetElement[i].classList.add('show')
-            }
-        }
-    })
-    window.addEventListener('load', function () {
-        setTimeout(function () {
-            $FirstTargetElement.forEach(function (item, index) {
-                if (index === 0) {
-                    item.classList.add('show')
-                } else if (index === 2) {
-                    setTimeout(function () {
-                        item.classList.add('show')
-                    }, 1500)
-                }
-                else {
-                    setTimeout(function () {
-                        item.classList.add('show')
-                    }, 600)
-                }
-            })
-        }, 1000)
-    })
-    document.addEventListener('scroll', function () {
-        for (let i = 0; i < $WorkTargetElement.length; i++) {
-            // ビューポートの最上辺から要素の最上辺の距離の数値 + 要素の高さ * 0.6
-            const $getWorkElementDistance = $WorkTargetElement[i].getBoundingClientRect().top + $WorkTargetElement[i].clientHeight * 0.6
-            // もし$getWorkElementDistanceよりビューポートの高さのほうが大きければ
-            if (window.innerHeight > $getWorkElementDistance) {
-                setTimeout(function () {
-                    $WorkTargetElement[i].classList.add('show')
-                }, 1000 * i * 0.3)
-            }
-        }
-    })
-    for (let i = 0; i < $WorkTargetElement.length; i++) {
-        $WorkTargetElement[i].addEventListener('click', function () {
-            $ModalItem.classList.add('active');
-            $WorksOverlay.classList.add('active');
-            // $MainElement.style.overflow = 'hidden';
-        })
-    }
-    console.log('Click event triggered');
-}
-ShowAnimation();
