@@ -146,11 +146,13 @@ function ShowSampleImage() {
         'images/portfolio_modal_sample_list_item_img4.png',
         'images/portfolio_modal_sample_list_item_img5.png'
     ]
-    const MainSampleImage = document.querySelector('.portfolio_modal_sample');
+    const MainSampleImage = document.querySelectorAll('.portfolio_modal_sample');
     SampleImage.forEach(function (item, index) {
         item.onmouseover = function () {
             // なぜSampleImageのインデックス番号を取得しているのにSampleImage変数でindexが使用出来ているのか言語化不可
-            MainSampleImage.setAttribute('src', SampleImageList[index]);
+            MainSampleImage.forEach(function (item2) {
+                item2.setAttribute('src', SampleImageList[index]);
+            })
         }
     })
     console.log(SampleImage)

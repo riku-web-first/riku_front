@@ -180,6 +180,7 @@ body {
     transform: translateY(20px);
     opacity: 0;
     transition: all 0.8s;
+    margin-top: 16px;
 }
 
 .portfolio_firstview_imgs.show {
@@ -239,7 +240,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 10px 20px;
+    padding: 30px 10px 20px;
 }
 
 .portfolio_content_inner {
@@ -497,7 +498,9 @@ body {
 .portfolio_modal_sample {
     width: 100%;
     max-width: 700px;
+    max-height: 380px;
     margin-top: 10px;
+    object-fit: cover;
 }
 
 .portfolio_skill_list {
@@ -835,7 +838,9 @@ body {
 }
 
 @media screen and (max-width:959px) {
-    .portfolio_skill_list,.portfolio_works_list {
+
+    .portfolio_skill_list,
+    .portfolio_works_list {
         grid-template-columns: 1fr 1fr;
     }
 }
