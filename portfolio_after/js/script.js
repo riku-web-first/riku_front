@@ -76,15 +76,13 @@ function ShowAnimation() {
                 if (window.innerHeight > $getSkillElementDistance) {
                     $SkillTargetElement[i].classList.add('show')
                 }
-            } else {
-                if (window.innerHeight > $getSkillElementDistance) {
-                    setTimeout(function () {
-                        $SkillTargetElement[i].classList.add('show')
-                        // 要素一つ一つに遅延させて表示させてるから、
-                        // if文でビューポート959px以下の条件を指定しないとレスポンシブだと要素が増えるにつれて
-                        // 300ミリ*n秒掛かって表示されてしまう
-                    }, 1000 * i * 0.3)
-                }
+            } else if (window.innerHeight > $getSkillElementDistance) {
+                setTimeout(function () {
+                    $SkillTargetElement[i].classList.add('show')
+                    // 要素一つ一つに遅延させて表示させてるから、
+                    // if文でビューポート959px以下の条件を指定しないとレスポンシブだと要素が増えるにつれて
+                    // 300ミリ*n秒掛かって表示されてしまう
+                }, 1000 * i * 0.3)
             }
         }
     })

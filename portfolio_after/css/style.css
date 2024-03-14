@@ -438,7 +438,7 @@ body {
 }
 
 .portfolio_modal_detail_item_link {
-    display: inline-block;
+    display: block;
     width: max-content;
 }
 
