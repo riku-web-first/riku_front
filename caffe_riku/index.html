@@ -4,37 +4,61 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- ここから共通 -->
   <title>拠り所 リク</title>
   <link rel="stylesheet" href="css/reset.css">
+  <link href="css/common.css" rel="stylesheet">
+  <link rel="stylesheet" href="../common_googlefonts/fontface.css">
+  <!-- ここまで共通 -->
   <link href="css/index.css" rel="stylesheet">
-  <link href="css/jquery.bxslider.css" rel="stylesheet">
-  <script src="js/jquery-2.1.4.min.js"></script>
-  <script src="js/jquery.bxslider.js"></script>
-  <script src="js/style.js" defer></script>
 </head>
 
-<body>
+<body class="main_bg">
   <header>
     <div class="header_inner">
       <h1><img src="images/logo.png" alt="リクのロゴ"></h1>
-      <ul class="site_navi_list">
+      <!-- <ul class="site_navi_list">
         <li class="site_navi_list_item"><a class="site_navi_list_item_link" href="">お問い合わせ</a></li>
         <li class="site_navi_list_item"><a class="site_navi_list_item_link" href="">サイトマップ</a></li>
         <li class="site_navi_list_item"><a class="site_navi_list_item_link" href="">アンケート</a></li>
         <li class="site_navi_list_item"><a class="site_navi_list_item_link" href="">採用情報</a></li>
-      </ul>
+      </ul> -->
     </div>
+    <ul class="mainmenu_list">
+      <li class="mainmenu_list_item"><a class="mainmenu_list_item_link" href="">TOP&nbsp;PAGE</a></li>
+      <li class="mainmenu_list_item"><a class="mainmenu_list_item_link" href="">MENU</a></li>
+      <li class="mainmenu_list_item"><a class="mainmenu_list_item_link" href="">BLOG</a></li>
+      <li class="mainmenu_list_item"><a class="mainmenu_list_item_link" href="">ACCESS</a></li>
+      <li class="mainmenu_list_item"><a class="mainmenu_list_item_link" href="">CONTACT</a></li>
+    </ul>
   </header>
-  <main>
-    <div class="mainmenu">
-      <ul class="mainmenu_list">
-        <li class="mainmenu_list_item"><a class="mainmenu_list_item_link" href="">TOP&nbsp;PAGE</a></li>
-        <li class="mainmenu_list_item"><a class="mainmenu_list_item_link" href="">MENU</a></li>
-        <li class="mainmenu_list_item"><a class="mainmenu_list_item_link" href="">BLOG</a></li>
-        <li class="mainmenu_list_item"><a class="mainmenu_list_item_link" href="">ACCESS</a></li>
-        <li class="mainmenu_list_item"><a class="mainmenu_list_item_link" href="">CONTACT</a></li>
+  <main class="main_content main_content_sitetop">
+    <div class="main_content_caption_top">Find Your Rest Here</div>
+    <div class="main_content_caption_sub">一杯のコーヒーがつなぐ、心の通う場所</div>
+    <div class="main_content_shopname">Cafe Riku</div>
+    <div class="main_content_news_wrapper">
+      <div class="main_content_news_title">NEWS</div>
+      <ul class="main_content_news_list">
+        <li class="main_content_news_list_item">
+          <span class="main_content_news_list_item_date">20XX/XX/31</span><a href=""><span
+              class="main_content_news_list_item_text">新商品の情報を追加しました。</span></a>
+        </li>
+        <li class="main_content_news_list_item">
+          <span class="main_content_news_list_item_date">20XX/XX/23</span><span
+            class="main_content_news_list_item_text">Menuページを追加しました。</span><img src="" alt="">
+        </li>
+        <li class="main_content_news_list_item">
+          <span class="main_content_news_list_item_date">20XX/XX/01</span><span
+            class="main_content_news_list_item_text">Accessページを追加しました。</span>
+        </li>
       </ul>
     </div>
+    <ul class="main_content_slider_list">
+      <li class="main_content_slider_list_item"><img src="images/subslider1.png" alt=""></li>
+      <li class="main_content_slider_list_item"><img src="images/subslider2.png" alt=""></li>
+    </ul>
+  </main>
+  <!-- <main class="main_content">
     <div class="slider">
       <ul class="bxslider">
         <li><img src="images/cafe1test.jpg" /></li>
@@ -46,17 +70,6 @@
       <div class="leftcolumn">
         <div class="news">
           <h2>What'New</h2>
-          <ul>
-            <li><img src="images/item.png" />2020/12/30 <br /><a href="">新商品の情報を追加しました。</a></li>
-            <li><img src="images/info.png" />2020/12/05 <br />Menuページを追加しました。</li>
-            <li><img src="images/shop.png" />2020/11/01 <br />Accessページを追加しました。</li>
-            <li>2020/10/05 <br />Blogページを追加しました。</li>
-            <li><img src="images/info.png" />2020/09/30 <br />ヘッダーを作成しました。</li>
-            <li><img src="images/shop.png" />2020/08/30 <br />フッターを作成しました。</li>
-            <li>2020/08/30 <br />WEBサイトの作成を開始しました。</li>
-            <li>2020/08/30 <br />WEBサイトの作成を開始しました。</li>
-            <li>2020/08/30 <br />WEBサイトの作成を開始しました。</li>
-          </ul>
         </div>
         <ul class="sns">
           <li><a href="#"><img src="images/instagram.png" /></a></li>
@@ -91,15 +104,15 @@
           <div class="searchinner">
             <div class="search_left">
               <h3>■条件から探す</h3>
-              <form action="#" method="post">
+              <form class="form_wrapper" action="#" method="post">
                 <ul class="choicelist">
                   <li>
-                    <input id="grand" type="checkbox" class="grand" name="grand">
-                    <label for="grand">グランドオープン</label>
+                    <input id="grandopen" type="checkbox" class="grand" name="grand">
+                    <label for="grandopen">グランドオープン</label>
                   </li>
                   <li>
-                    <input id="renewal" type="checkbox" class="renewal" name="renewal">
-                    <label for="renewal">リニューアルオープン</label>
+                    <input id="renewalopen" type="checkbox" class="renewal" name="renewal">
+                    <label for="renewalopen">リニューアルオープン</label>
                   </li>
                 </ul>
                 <p class="choice_shopname">店舗名</p>
@@ -136,15 +149,13 @@
                       </div>
                     </li>
                   </ul>
-                  <button class="search_btn" type="submit">
                 </div>
+                <button class="search_btn" type="submit">
               </form>
             </div>
             <div class="search_right">
-              <div class="map">
-                <h3>■地図から探す</h3>
-                <a href=""><img src="images/map.png" /></a>
-              </div>
+              <h3>■地図から探す</h3>
+              <a href=""><img src="images/map.png" /></a>
             </div>
           </div>
         </div>
@@ -155,7 +166,6 @@
           <li><a href=""><img src="images/drink_side.png" /></a></li>
           <li><a href=""><img src="images/food_side.png" /></a></li>
           <li><a href=""><img src="images/dessert_side.png" /></a></li>
-          <li><a href=""><img src="images/take_side.png" /></a></li>
         </ul>
         <ul class="bunner">
           <li><a href=""><img src="images/images/subslider1.png"></a></li>
@@ -164,83 +174,64 @@
       </div>
     </div>
   </main>
-  <footer>
-    <div class="footer">
-      <ul>
-        <li>
-          <p class="menutitle">Menu<br />
-            Rikuのメニュー</p>
-          <ul>
-            <li>新メニュー</li>
-            <li>ホットドリンク</li>
-          </ul>
-        </li>
-        <li>
-          <p class="searchtitle">Shop＆Search<br />
-            店舗情報</p>
-          <ul>
-            <li>店舗検索</li>
-          </ul>
-        </li>
-        <li>
-          <p class="companytitle">Company<br />
-            会社情報</p>
-          <ul>
-            <li>会社情報</li>
-            <li>会社概要</li>
-            <li>本社地図</li>
-            <li>プレリリース</li>
-          </ul>
-        </li>
-        <li>
-          <p class="contacttitle">Contact<br />
-            お問い合わせ</p>
-          <ul>
-            <li>お問い合わせ</li>
-            <li>個人情報保護方針</li>
-            <li>ご利用規約</li>
-          </ul>
-        </li>
-        <li>
-          <p class="recruittitle">Recruit<br />
-            採用情報</p>
-          <ul>
-            <li>社員採用情報</li>
-            <li>アルバイト採用情報</li>
-            <li>シニア層採用情報</li>
-            <li>新卒採用情報</li>
-            <li>中途採用情報</li>
-          </ul>
-        </li>
-        <li>
-          <p class="othertitle">Other<br />
-            その他</p>
-          <ul>
-            <li>サイトマップ</li>
-          </ul>
-        </li>
-      </ul>
-    </div>
+  <footer class="footer_content">
+    <ul class="footer">
+      <li>
+        <p class="shop_info_list_title">Menu<br />
+          Rikuのメニュー</p>
+        <ul>
+          <li>新メニュー</li>
+          <li>ホットドリンク</li>
+        </ul>
+      </li>
+      <li>
+        <p class="shop_info_list_title">Shop＆Search<br />
+          店舗情報</p>
+        <ul>
+          <li>店舗検索</li>
+        </ul>
+      </li>
+      <li>
+        <p class="shop_info_list_title">Company<br />
+          会社情報</p>
+        <ul>
+          <li>会社情報</li>
+          <li>会社概要</li>
+          <li>本社地図</li>
+          <li>プレリリース</li>
+        </ul>
+      </li>
+      <li>
+        <p class="shop_info_list_title">Contact<br />
+          お問い合わせ</p>
+        <ul>
+          <li>お問い合わせ</li>
+          <li>個人情報保護方針</li>
+          <li>ご利用規約</li>
+        </ul>
+      </li>
+      <li>
+        <p class="shop_info_list_title">Recruit<br />
+          採用情報</p>
+        <ul>
+          <li>社員採用情報</li>
+          <li>アルバイト採用情報</li>
+          <li>シニア層採用情報</li>
+          <li>新卒採用情報</li>
+          <li>中途採用情報</li>
+        </ul>
+      </li>
+      <li>
+        <p class="shop_info_list_title">Other<br />
+          その他</p>
+        <ul>
+          <li>サイトマップ</li>
+        </ul>
+      </li>
+    </ul>
   </footer>
-  <div class="copy">
-    <small>Copyright © 2020 Riku All right Reserved</small>
-  </div>
+  <div class="copy">Copyright © 2020 Riku All right Reserved</div> -->
 
 </body>
-<script>
-  $(document).ready(function () {
-    var obj = $('.bxslider').bxSlider({
-      mode: 'horizontal',
-      speed: 800, //エフェクトのスピード
-      auto: true,//自動再生有効
-      slideWidth: 1000, //スライドショーの幅
-      pause: 10000,//表示間隔
-      maxslide: 1,
-      controls: false,
-      pager: true,
-      onSlideAfter: function () { obj.startAuto(); }//自動的に再開
-    });
-  });
-</script>
-
+<script src="js/script.js"></script>
 </html>

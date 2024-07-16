@@ -1,0 +1,133 @@
+html {
+    background-color: #ffffff;
+}
+
+body {
+    /* font-family: 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif; */
+}
+
+body {
+    font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+}
+
+.main_content {
+    /* width: 1000px; */
+    padding-top: 72px;
+}
+
+.menu_icon {
+    display: none;
+}
+
+header {
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 8px 40px;
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
+}
+
+.header_inner {
+    font-size: 0;
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-between;
+}
+
+header h1 img {
+    width: 220px;
+}
+
+.site_navi_list {
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.site_navi_list_item {
+    list-style: none;
+    padding: 0px 10px;
+    text-decoration: none;
+}
+
+.site_navi_list_item:last-child {
+    margin-right: 0px;
+}
+
+.site_navi_list_item_link {
+    color: #333333;
+}
+
+.mainmenu {
+    width: 100%;
+}
+
+.mainmenu_list {
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    margin-left: 20px;
+}
+
+.mainmenu_list_item:hover {
+    border-bottom: 2px solid #333333;
+}
+
+.mainmenu_list_item:nth-child(n+2) {
+    margin-left: 80px;
+}
+
+.mainmenu_list_item_link {
+    font-size: 18px;
+    color: #333333;
+}
+
+.mainmenu li:last-child {
+    border-right: none;
+}
+
+.footer_content {
+    width: 100%;
+    background-color: darkgrey;
+}
+
+.footer {
+    font-size: 12px;
+    padding: 10px 0;
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+
+.footer li {
+    width: 150px;
+    padding-right: 26px;
+}
+
+.footer li ul {
+    flex-direction: column;
+}
+
+.footer ul li ul li {
+    font-size: 12px;
+    line-height: 2;
+}
+
+.shop_info_list_title {
+    color: #4c4c4c;
+    font-size: 14px;
+    font-weight: bold;
+    border-bottom: dotted white;
+    padding-bottom: 7px;
+}
+
+.copy {
+    text-align: center;
+    padding: 10px 0;
+}
