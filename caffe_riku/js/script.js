@@ -6,7 +6,7 @@ function slider() {
         // 各アイテムを左に移動
         SliderItem.forEach(function(item) {
             item.style.transition = 'transform 0.5s';
-            item.style.transform = 'translateX(-342px)';
+            item.style.transform = 'translateX(-250px)';
         });
 
         // トランジション後に位置をリセットし、最初のアイテムをリストの最後に移動
@@ -34,7 +34,7 @@ function slider() {
 }
 
 window.addEventListener('load', function() {
-    slider();
+    // slider();
 });
 
 

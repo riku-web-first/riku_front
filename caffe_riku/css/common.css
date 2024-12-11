@@ -10,9 +10,7 @@ body {
     font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
 }
 
-.main_content {
-
-}
+.main_content {}
 
 .menu_icon {
     display: none;
@@ -24,19 +22,37 @@ header {
     padding: 8px 40px;
     position: absolute;
     width: 100%;
-    /* display: flex; */
-    /* justify-content: space-between; */
-    /* align-items: center; */
     box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
     position: relative;
     height: 72px;
+    display: flex;
+    justify-content:space-between;
 }
 
-.header_inner {
-    font-size: 0;
-    /* max-width: 1000px; */
-    display: flex;
-    justify-content: space-between;
+.mainmenu_list_button {
+    width: 24px;
+    height: 14px;
+    position: absolute;
+    top: 29px;
+    left:28px;
+    cursor: pointer;
+    display: none;
+}
+
+.mainmenu_list_button_line {
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    transition: transform 0.2s;
+    background-color: #8b8b8b;
+}
+
+.mainmenu_list_button_line_middle {
+    margin-top: 6px;
+}
+
+.mainmenu_list_button_line_bottom {
+    margin-top: 12px;
 }
 
 header h1 img {
@@ -141,17 +157,26 @@ header h1 img {
 }
 
 @media screen and (max-width:989px) {
-    .footer_content{
-        display:none;
+    .footer_content {
+        display: none;
     }
 }
 
 @media screen and (max-width:749px) {
-.mainmenu_list{
-    display: none;
-}
-.header_inner{
-    justify-content: center;
-}
+    header{
+        justify-content: center;
+    }
+
+    .mainmenu_list_button {
+        display: block;
+    }
+
+    .mainmenu_list {
+        display: none;
+    }
+
+    .header_inner {
+        justify-content: center;
+    }
 
 }

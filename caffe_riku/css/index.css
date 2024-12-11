@@ -25,6 +25,8 @@ h3 {
 	background-position: left 0 top 0;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
+	background-blend-mode: overlay;
+	background-color: rgba(0, 0, 0, 0.3);
 	position: fixed;
 }
 
@@ -87,7 +89,7 @@ h3 {
 	color: #ffffff;
 }
 
-.main_content_news_list_item:nth-child(n+2){
+.main_content_news_list_item:nth-child(n+2) {
 	margin-top: 12px;
 }
 
@@ -98,18 +100,34 @@ h3 {
 
 .main_content_slider_list {
 	display: flex;
-	width: 342px;
+	width: 300px;
 	overflow: hidden;
 	position: absolute;
 	bottom: 30px;
 	right: 30px;
 }
 
+.main_content_slider_list_item {}
+
+.main_content_slider_list_item_link {
+	display: block;
+}
+
+.main_content_slider_list_item_img {
+	width: 300px;
+}
+
 @media screen and (max-width:749px) {
 
-	.main_content_sitetop{
-		padding:0 40px;
+	.main_content_sitetop {
+		padding: 0 40px;
+		height: auto;
 	}
+
+	.main_content_shopname {
+		font-size: 60px;
+	}
+
 	.main_content_slider_list {
 		position: static;
 		margin-top: 50px;
