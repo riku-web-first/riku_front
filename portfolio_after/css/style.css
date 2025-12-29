@@ -898,7 +898,7 @@ body {
     top: calc(50% - 12px);
 }
 
-@media screen and (max-width:767px) {
+@media screen and (max-width:768px) {
 
     .portfolio_modal_content {
         height: 90vh;
@@ -934,7 +934,7 @@ body {
     }
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width:769px) {
     .portfolio_menu_list_button {
         display: none;
     }

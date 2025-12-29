@@ -140,9 +140,11 @@ function ShowSampleImage() {
     let SampleImageList = [
         'images/portfolio_modal_sample_list_item_img1.png',
         'images/portfolio_modal_sample_list_item_img2.png',
-        'images/portfolio_modal_sample_list_item_img3.png',
-        'images/portfolio_modal_sample_list_item_img4.png',
-        'images/portfolio_modal_sample_list_item_img5.png'
+        'images/portfolio_works_list_item_sample_img_kn.png',
+        'images/portfolio_modal_sample_list_item_img1_kn.png',
+        'images/portfolio_works_list_item_sample_img_holy.png',
+        'images/portfolio_works_list_item_sample_img_wataman.png',
+        'images/portfolio_modal_sample_list_item_img1_wataman.png'
     ]
     const MainSampleImage = document.querySelectorAll('.portfolio_modal_sample');
     SampleImage.forEach(function (item, index) {
