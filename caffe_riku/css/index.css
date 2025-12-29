@@ -20,14 +20,17 @@ h3 {
 .main_bg {
 	width: 100%;
 	height: 100vh;
-	background-image: url(../images/ogasuta458A7873.jpg);
+	background-image: url(../images/main.png);
 	background-size: cover;
 	background-position: left 0 top 0;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
-	background-blend-mode: overlay;
-	background-color: rgba(0, 0, 0, 0.3);
+	/* background-blend-mode: overlay; */
+	/* background-color: rgba(0, 0, 0, 0.3); */
+	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url('../images/main_shop1.png');
 	position: fixed;
+	opacity: 1;
+	transition: opacity 0.5s;
 }
 
 .main_content_sitetop {
@@ -35,8 +38,13 @@ h3 {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+	padding-top: 72px;
 	position: relative;
-	height: calc(100vh - 72px);
+	height: 100vh;
+}
+
+.main_content_menu_list_item {
+	text-align: center;
 }
 
 .main_content_caption_top {
@@ -44,11 +52,13 @@ h3 {
 	color: #ffffff;
 	font-family: "Open Sans", sans-serif;
 	font-weight: 300;
+	margin-top: 30px;
 }
 
 .main_content_caption_sub {
 	font-size: 20px;
 	color: #ffffff;
+	white-space: nowrap;
 	border-bottom: 1px solid #ffffff;
 	padding: 0 30px 16px;
 }
@@ -60,6 +70,12 @@ h3 {
 	margin-top: 84px;
 	color: #ffffff;
 	font-weight: 300;
+	opacity: 0;
+	transition: 0.5s opacity;
+}
+
+.main_content_shopname.show {
+	opacity: 1;
 }
 
 .main_content_news_wrapper {
@@ -120,7 +136,7 @@ h3 {
 @media screen and (max-width:749px) {
 
 	.main_content_sitetop {
-		padding: 0 40px;
+		padding: 72px 40px 0;
 		height: auto;
 	}
 

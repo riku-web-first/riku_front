@@ -1,4 +1,4 @@
-.main_top_bakcground {
+.main_top_background {
     height: 60vh;
     background-image: url(../assets/main_top_background.jpg);
     background-repeat: no-repeat;
@@ -9,21 +9,7 @@
     background-position: top 0 left 0;
 }
 
-h2 {
-    font-size: 60px;
-    font-weight: 300;
-    color: #4c4c4c;
-    font-family: "Open Sans", sans-serif;
-    border-left: 1px solid #4c4c4c;
-    padding-left: 50px;
-    margin-top: 30px;
-}
 
-.main_content_menu {
-    max-width: 980px;
-    margin: 0 auto;
-    padding: 40px 20px;
-}
 
 .menu_item_content {
     display: flex;
@@ -66,17 +52,19 @@ h2 {
 }
 
 .menu_item_img {
-    max-width: 420px;
-    object-fit: contain;
+    width: 40%;
+    max-height: 250px;
+    object-fit: cover;
 }
 
 @media screen and (max-width:749px) {
-    .main_top_bakcground {
+    .main_top_background {
         height: 20vh;
     }
 
     .menu_item_content{
         display: block;
+        margin-top:40px;
     }
 
     .menu_item_left{
@@ -84,6 +72,7 @@ h2 {
     }
 
     .menu_item_img {
-        max-width: 100%;
+        width: 100%;
+        margin-top:12px;
     }
 }
