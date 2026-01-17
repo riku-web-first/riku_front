@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ここから共通 -->
+    <title>拠り所 リク</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link href="css/common.css" rel="stylesheet">
+    <link rel="stylesheet" href="../common_googlefonts/fontface.css">
+    <!-- ここまで共通 -->
+    <link href="css/menu.css" rel="stylesheet">
+    <link href="css/access.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- ここから共通 -->
+    <header class="header_dropdown">
+        <div id="sp_menu_opener" class="mainmenu_list_button">
+            <div class="mainmenu_list_button_line mainmenu_list_button_line_top"></div>
+            <div class="mainmenu_list_button_line mainmenu_list_button_line_middle"></div>
+            <div class="mainmenu_list_button_line mainmenu_list_button_line_bottom"></div>
+        </div>
+        <a href="index.html">
+            <h1><img src="images/logo.png" alt="リクのロゴ"></h1>
+        </a>
+        <ul class="mainmenu_list">
+            <li class="mainmenu_list_item"><a class="mainmenu_list_item_link" href="index.html">TOP&nbsp;PAGE</a></li>
+            <li class="mainmenu_list_item"><a class="mainmenu_list_item_link" href="menu.html">MENU</a>
+            </li>
+            <li class="mainmenu_list_item"><a class="mainmenu_list_item_link" href="">BLOG</a></li>
+            <li class="mainmenu_list_item"><a class="mainmenu_list_item_link" href="">ACCESS</a></li>
+            <li class="mainmenu_list_item"><a class="mainmenu_list_item_link" href="">CONTACT</a></li>
+        </ul>
+    </header>
+    <!-- ここまで共通 -->
+    <main class="main_content main_content_menu main_content_access">
+        <h2>Access</h2>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6477.044860142232!2d140.274355!3d35.737962!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60228d9352d24c07%3A0xc45a073809da8ef5!2z6bq65bGL6Z2S5bGxIOmFkuOAheS6leW6lw!5e0!3m2!1sja!2sjp!4v1766907606563!5m2!1sja!2sjp"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+        <ul class="main_access_detail_list">
+            <li class="main_access_detail_list_item">1. 酒々井駅東口を出たら200メートルほど進んで左に曲がる</li>
+            <li class="main_access_detail_list_item">2. 200メートルほど進んで左に曲がる</li>
+            <li class="main_access_detail_list_item">3. 信号を渡って右に曲がる</li>
+            <li class="main_access_detail_list_item">4. 100メートルほど進んで左に曲がる</li>
+            <li class="main_access_detail_list_item">5. 50メートルほど進むと右手に当店が見えます</li>
+        </ul>
+    </main>
+    <footer class="footer_content"></footer>
+    <div class="copy">Copyright © 2020 Riku All right Reserved</div>
+</body>
+<script src="js/script.js"></script>
+<script>
+    $(document).ready(function () {
+        var obj = $('.bxslider').bxSlider({
+            mode: 'horizontal',
+            speed: 800, //エフェクトのスピード
+            auto: true,//自動再生有効
+            slideWidth: 1000, //スライドショーの幅
+            pause: 10000,//表示間隔
+            maxslide: 1,
+            controls: false,
+            pager: true,
+            onSlideAfter: function () { obj.startAuto(); }//自動的に再開
+        });
+    });
+</script>
+
+</html>

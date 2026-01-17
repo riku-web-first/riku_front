@@ -1,0 +1,153 @@
+.portfolio_panel_like {
+	position: relative;
+	overflow: hidden;
+}
+
+.portfolio_panel_video {
+	opacity: 0.3;
+	position: absolute;
+	top: 0;
+	left: 0;
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+}
+
+.portfolio_panel_title_like {
+	position: relative;
+}
+
+.portfolio_panel_inner_like {
+	position: relative;
+}
+
+.portfolio_panel_inner_like_list_item:nth-child(n+2) {
+	margin-top: 30px;
+}
+
+.portfolio_panel:not(.portfolio_panel_header) {
+	margin-top: 6px;
+}
+
+.portfolio_panel_inner_list_item:nth-child(n+2) {
+	margin-top: 20px;
+}
+
+.portfolio_panel_inner_list_item {
+	transform: translateY(20px);
+	transition: 1s;
+	opacity: 0;
+}
+
+.portfolio_panel_inner_list_item.show {
+	transform: translateY(0px);
+	opacity: 1;
+}
+
+.portfolio_panel_future_title {
+	font-size: 14px;
+	text-align: center;
+	background-color: #333;
+	border-radius: 3px;
+	width: 100%;
+	transform: translateY(20px);
+	transition: 1s;
+	opacity: 0;
+	margin-top: 10px;
+}
+
+.portfolio_panel_future_title.show {
+	transform: translateY(0px);
+	opacity: 1;
+}
+
+.portfolio_panel_inner_like_list_item_body {
+	padding-left: 16px;
+}
+
+.portfolio_panel_inner_skill {
+	text-align: center;
+	width: 100%;
+	margin-top: 10px;
+}
+
+.portfolio_panel_inner_skill_img {
+	width: 100px;
+}
+
+.portfolio_panel_inner_skill_text {
+	text-align: start;
+	width: 100%;
+}
+
+.portfolio_panel_inner_skill_library_list {
+	padding-left: 10px;
+}
+
+.portfolio_panel_inner_skill_library_list_item{
+	position: relative;
+	padding-left: 10px;
+}
+.portfolio_panel_inner_skill_library_list_item::before {
+	content: "-";
+	position: absolute;
+	left: 0;
+}
+
+.portfolio_panel_future_skill {
+	width: 100%;
+	margin-top: 10px;
+}
+
+.portfolio_panel_future_skill li:not(:last-of-type) {
+	margin-bottom: 20px;
+}
+
+.portfolio_panel_inner_list li,
+.anime li {
+	position: relative;
+}
+
+.portfolio_panel_inner_list li:before,
+.anime li:before {
+	content: '■';
+	padding-right: 3px;
+}
+
+@media screen and (min-width:768px) {
+	.header_inner img {
+		width: 200px;
+	}
+
+	nav ul li {
+		font-size: 14px;
+	}
+
+	.portfolio_panel_inner_skill {
+		width: 100%;
+		display: flex;
+		margin-top: 10px;
+	}
+
+	.portfolio_panel_inner_skill_text {
+		width: 90%;
+		margin-left: 6px;
+	}
+
+	.portfolio_panel_inner_skill_icon {
+		width: 10%;
+	}
+
+	.portfolio_panel_inner_skill_icon img {
+		width: 70px;
+	}
+
+	.skill_inner li:not(:last-of-type) {
+		margin-bottom: 20px;
+	}
+
+	.portfolio_panel_future_title {
+		font-size: 16px;
+		letter-spacing: 5px;
+	}
+}

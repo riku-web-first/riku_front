@@ -1,0 +1,253 @@
+html {
+    background-color: #ffffff;
+}
+
+body {
+    /* font-family: 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif; */
+}
+
+body {
+    font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+}
+
+.menu_icon {
+    display: none;
+}
+
+header {
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 8px 40px;
+    position: fixed;
+    width: 100%;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
+    height: 72px;
+    display: flex;
+    justify-content: space-between;
+    transition: transform 0.4s;
+    z-index: 1;
+}
+
+.header_dropdown.inactive {
+    transform: translateY(-100%);
+}
+
+.header_dropdown.active {
+    /* transform: translateY(100%); */
+}
+
+.main_content_menu_list_item {
+    border-bottom: 1px solid #fff;
+    background-image: url("images/chevron-right.svg");
+}
+
+
+.main_content_menu_list_item:last-child {
+    border-bottom: none;
+}
+
+
+.main_menu_list_item_link_sp {
+    font-weight: bold;
+    text-align: left;
+    padding: 18px 10px;
+    display: block;
+    position: relative
+}
+
+.mainmenu_list_item_chevron {
+    width: 12px;
+    height: 20px;
+    position: absolute;
+    right: 0;
+    top: calc(50% - 10px);
+}
+
+.mainmenu_list_button {
+    width: 24px;
+    height: 14px;
+    position: absolute;
+    top: 29px;
+    left: 28px;
+    cursor: pointer;
+    display: none;
+}
+
+.mainmenu_list_button_line {
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    transition: transform 0.2s;
+    background-color: #814c4c;
+}
+
+.mainmenu_list_button_line_middle {
+    margin-top: 6px;
+}
+
+.mainmenu_list_button_line_bottom {
+    margin-top: 12px;
+}
+
+.main_content_menu_list_sp {
+    transform: translateX(-100%);
+    transition: transform 0.2s;
+    background-color: rgb(0, 44, 0);
+    width: 100vw;
+    padding: 20px;
+    height: calc(100vh - 72px);
+    z-index: 1;
+    position: absolute;
+    top: 72px;
+}
+
+.main_content_menu_list_sp.active {
+    transform: translateX(0);
+}
+
+header h1 img {
+    width: 220px;
+}
+
+.site_navi_list {
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.site_navi_list_item {
+    list-style: none;
+    padding: 0px 10px;
+    text-decoration: none;
+}
+
+.site_navi_list_item:last-child {
+    margin-right: 0px;
+}
+
+.site_navi_list_item_link {
+    color: #333333;
+}
+
+.mainmenu {
+    width: 100%;
+}
+
+.mainmenu_list {
+    /* width: 60%; */
+    /* height: 28px; */
+    display: flex;
+    /* justify-content: right; */
+    /* margin-left: 20px; */
+}
+
+.mainmenu_list_item {
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.mainmenu_list_item:nth-child(n+2) {
+    margin-left: 22px;
+}
+
+.mainmenu_list_item_link {
+    font-size: 18px;
+    color: #333333;
+}
+
+.mainmenu_list_item_link:hover {
+    border-bottom: 2px solid #333333;
+}
+
+.mainmenu li:last-child {
+    border-right: none;
+}
+
+h2 {
+    font-size: 60px;
+    font-weight: 300;
+    color: #4c4c4c;
+    font-family: "Open Sans", sans-serif;
+    border-left: 1px solid #4c4c4c;
+    padding-left: 50px;
+    margin-top: 30px;
+}
+
+.main_content_menu {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.footer_content {
+    width: 100%;
+    background-color: darkgrey;
+}
+
+.footer {
+    font-size: 12px;
+    padding: 10px 0;
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.footer li {
+    width: 150px;
+    padding-right: 26px;
+}
+
+.footer li ul {
+    flex-direction: column;
+}
+
+.footer ul li ul li {
+    font-size: 12px;
+    line-height: 2;
+}
+
+.shop_info_list_title {
+    color: #4c4c4c;
+    font-size: 14px;
+    font-weight: bold;
+    border-bottom: dotted white;
+    padding-bottom: 7px;
+}
+
+.copy {
+    text-align: center;
+    padding: 10px 0;
+}
+
+@media screen and (max-width:989px) {
+    .footer_content {
+        display: none;
+    }
+}
+
+@media screen and (max-width:749px) {
+    header {
+        justify-content: center;
+    }
+
+    h2 {
+        font-size: 40px;
+        padding-left: 20px;
+        margin-top: 0px;
+    }
+
+    .mainmenu_list_button {
+        display: block;
+    }
+
+    .mainmenu_list {
+        display: none;
+    }
+
+    .header_inner {
+        justify-content: center;
+    }
+
+}
